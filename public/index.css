@@ -1,0 +1,111 @@
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-size: cover;
+  
+}
+#overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+}
+.typewriter h1 {
+    font-family:  'Helvetica Neue';
+    color: #7BAFD4;
+    overflow: hidden;
+    border-right: .03em solid transparent;
+    font-size: 60px;
+    padding-top: 10%;
+    padding-left: 2%;
+    white-space: nowrap;
+    margin: 0 auto;/* Gives that scrolling effect as the typing happens */
+    letter-spacing: .1em;/* Adjust as needed */
+    animation: typing 5s steps(60, end), step-end infinite;
+  }
+
+@keyframes typing {
+  from {
+    width: 0%
+  }
+  to {
+    width: 100%
+  }
+}
+
+
+
+.container-heading {
+    position: absolute;
+    color:rgb(225, 225, 225);
+    width: 100%;
+    margin-left: center;
+    text-align: center;
+
+}
+
+.about {
+  width: 70%;
+  margin:auto;
+}
+
+.text {
+    font-size: 20px;
+    color: rgb(225, 225, 225);
+    padding: 2%;
+    margin-top: 5%;
+    border-color: rgb(225, 225, 225);
+    border-style: solid;
+    border-width: 2;
+    width: min-content;
+    align-content: flex-end;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  }
+
+  .button {
+    border-radius: 6px;
+    background-color: #87bfe7c7;
+    border: rgb(225, 225, 225);
+    color: rgb(225, 225, 225);
+    text-align: center;
+    font-size: 30px;
+    padding: 2%;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+
+
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    margin-top: 5%;
+    
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
