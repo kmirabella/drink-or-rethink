@@ -6,6 +6,19 @@
     text-align: center;
   
   }
+  .calendar-row{
+    margin-left: 20px; 
+    margin-right: 20px; 
+    height: 100px; 
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .calendar-day{
+    border: 5px solid #87bfe7c7;
+    width: 250px;
+    margin-top:15px;
+  }
   
   .navbar {
     background-color: #333;
