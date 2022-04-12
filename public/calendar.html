@@ -5,33 +5,309 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="calendar.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="calendar.js" type="module"></script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
 
 
 <body>
     <div class="title-container">
       <h1>Drink or Rethink</h1>
       <div class= "calendar-row">
-        <div class = "calendar-day">
-          <h1>Sun</h1>
+        <button class = "calendar-day" id ="sun" type = "button" onclick=sundaySpecials()>
+            Sun
+        </button>
+        <button class = "calendar-day" type = "button" id = "mon" onclick=mondaySpecials() >
+          Mon
+        </button>
+        <button class = "calendar-day" type = "button" id = "tues" onclick = tuesdaySpecials()>
+          Tues
+        </button>
+        <button class = "calendar-day" type="button" id = "wed" onclick=wednesdaySpecials()>
+          Wed
+        </button>
+        <button class = "calendar-day" type = "button" id = "thurs" onclick=thursdaySpecials()>
+          Thurs
+        </button>
+        <button class = "calendar-day" type="button"  id = "fri"  onclick=fridaySpecials()>
+          Fri
+        </button>
+        <button class = "calendar-day" type="button" id="sat" onclick=saturdaySpecials()>
+          Sat
+        </button>
+      </div>
+      <div class = "listOfDrinkSpecials">
+        <h1 class="title">Drink Specials</h1>
+        <div id="drinks"> 
+            <h2> Goodfellows: </h2>
+            <p>$2.50 Shooters</p>
+            <p>$3.50 Long Island Iced Teas</p>
+
+            <h2>Might As Well:</h2>
+            <p>$3.00 House Wine Glasses</p>  
+            <p>$3.00 Craft Bottles</p>
+            <p>$4.00 MAW-tinis</p>
+
+            <h2>He's Not Here:</h2> 
+            <p>$5 Blue Cups</p>
+            
+            <h2>Pantana Bob’s:</h2> 
+            <p>$3.00 Kamikaze shots</p>
+            <p>$3.00 Tequila</p>
+            <p>$2.50 Landsharks </p>
+
+            <h2>La Residence:</h2>
+            <p>$4.00 Mimosas </p>
+           
+            <h1 class = "title">Events</h1>
+            <p>No Events Today</p>
         </div>
-        <div class = "calendar-day">
-          <h1>Mon</h1>
-        </div>
-        <div class = "calendar-day">
-          <h1>Tues</h1>
-        </div>
-        <div class = "calendar-day">
-          <h1>Wed</h1>
-        </div>
-        <div class = "calendar-day">
-          <h1>Thurs</h1>
-        </div>
-        <div class = "calendar-day">
-          <h1>Fri</h1>
-        </div>
-        <div class = "calendar-day">
-          <h1>Sat</h1>
-        </div>
+      </div> 
+
+      <script>
+        function sundaySpecials(){
+            const elem = document.getElementById("drinks");
+            elem.innerHTML = 
+            `<div> 
+              <h2> Goodfellows: </h2>
+              <p>1/2 off Drinks</p>
+
+              <h2>Might As Well:</h2>
+              <p>$3 Brewer’s Choice Pints</p>  
+              <p>$5 Kansas City Ice Waters</p>
+              
+              <h2>Pantana Bob’s:</h2> 
+              <p>$3 Bloody Marys</p>
+              <p>$1 Mimosas</p>
+
+              <h2>La Residence:</h2>
+              <p>$10 pitchers</p>
+              <p>$3 House Vodka</p>
+              <p>$4 Rumplemintz </p>
+
+              <h1 class = "title">Events</h1>
+              <p>No Events Today</p>
+            </div>
+            `;
+            document.getElementById("sun").style.backgroundColor = "#87bfe7c7";  
+            document.getElementById("mon").style.backgroundColor = "#ffffffff";
+            document.getElementById("tues").style.backgroundColor = "#ffffffff";
+            document.getElementById("thurs").style.backgroundColor = "#ffffffff";
+            document.getElementById("fri").style.backgroundColor = "#ffffffff";
+            document.getElementById("sat").style.backgroundColor = "#ffffffff";
+
+
+           
+          }
+          function mondaySpecials(){
+            const elem = document.getElementById("drinks");
+            elem.innerHTML = 
+            `<div> 
+              <h2> Goodfellows: </h2>
+              <p>$2.50 Shooters</p>
+              <p>$3.50 Long Island Iced Teas</p>
+
+              <h2>Might As Well:</h2>
+              <p>$3.00 House Wine Glasses</p>  
+              <p>$3.00 Craft Bottles</p>
+              <p>$4.00 MAW-tinis</p>
+
+              <h2>He's Not Here:</h2> 
+              <p>$5 Blue Cups</p>
+              
+              <h2>Pantana Bob’s:</h2> 
+              <p>$3.00 Kamikaze shots</p>
+              <p>$3.00 Tequila</p>
+              <p>$2.50 Landsharks </p>
+
+              <h2>La Residence:</h2>
+              <p>$4.00 Mimosas </p>
+             
+              <h1 class = "title">Events</h1>
+              <p>No Events Today</p>
+            </div>
+            `;
+            document.getElementById("sun").style.backgroundColor = "#ffffffff";
+            document.getElementById("mon").style.backgroundColor = "#87bfe7c7";
+            document.getElementById("tues").style.backgroundColor = "#ffffffff";
+            document.getElementById("wed").style.backgroundColor = "#ffffffff";
+            document.getElementById("thurs").style.backgroundColor = "#ffffffff";
+            document.getElementById("fri").style.backgroundColor = "#ffffffff";
+            document.getElementById("sat").style.backgroundColor = "#ffffffff";
+
+
+          }
+          function tuesdaySpecials(){
+            const elem = document.getElementById("drinks");
+            elem.innerHTML = 
+            `<div> 
+
+              <h2>Might As Well:</h2>
+              <p>$3.00 Margaritas</p>  
+              <p>$3.00 Landsharks</p>
+              <p>$5 Mojitos</p>
+              <p>$5 Epsilon</p>
+
+              <h2>La Residence:</h2>
+              <p>$3.50 Drafts </p>
+              <p>$2.50 NC Drafts </p>
+              <p>$1.00 off Bottles and Cans </p>
+
+              <h1 class = "title">Events</h1>
+              <h2>Goodfellows:</h2>
+              <p>9:00pm Trivia</p>
+              <p>11:30pm Karaoke</p>
+            </div>
+            `;
+            document.getElementById("sun").style.backgroundColor = "#ffffffff";
+            document.getElementById("mon").style.backgroundColor = "#ffffffff";
+            document.getElementById("tues").style.backgroundColor = "#87bfe7c7";
+            document.getElementById("wed").style.backgroundColor = "#ffffffff";
+            document.getElementById("thurs").style.backgroundColor = "#ffffffff";
+            document.getElementById("fri").style.backgroundColor = "#ffffffff";
+            document.getElementById("sat").style.backgroundColor = "#ffffffff";
+
+
+          }
+          function wednesdaySpecials(){
+            const elem = document.getElementById("drinks");
+            elem.innerHTML = 
+            `<div> 
+
+              <h2>Goodfellows:</h2>
+              <p>$2.00 Red Oak Pints</p>  
+              <p>$3.00 LITs</p>
+              <p>$4 Local Drafts</p>
+
+              <h2>Pantana Bob's:</h2>
+              <p>$2.50 Shooters </p>
+              <p>1/2 off Glasses of Wine</p>
+              <p>$5 Specialty Cocktails</p>
+
+              <h1 class = "title">Events</h1>
+              <p>No Events Today </p>
+            </div>
+            `;
+            document.getElementById("sun").style.backgroundColor = "#ffffffff";
+            document.getElementById("mon").style.backgroundColor = "#ffffffff";
+            document.getElementById("wed").style.backgroundColor = "#87bfe7c7";
+            document.getElementById("tues").style.backgroundColor = "#ffffffff";
+            document.getElementById("thurs").style.backgroundColor = "#ffffffff";
+            document.getElementById("fri").style.backgroundColor = "#ffffffff";
+            document.getElementById("sat").style.backgroundColor = "#ffffffff";
+
+
+          }
+          function thursdaySpecials(){
+            const elem = document.getElementById("drinks");
+            elem.innerHTML = 
+            `<div> 
+
+              <h2>Goodfellows:</h2>
+              <p>$2.50 Shooters</p>  
+              <p>$3.50 LITs</p>
+
+              <h2>Might As Well:</h2>
+              <p>$5.00 House Cocktails </p>
+              <p>$1.00 PBRs</p>
+              <p>$3 Wells</p>
+
+              <h2>Pantana Bob's:</h2>
+              <p>$1.00 off NC Drafts </p>
+              <p>$5.00 Moscow Mules</p>
+
+              <h2>La Residence:</h2>
+              <p>$4.00 Mimosas </p>
+              <p>$1.00 off all fireball shots</p>
+
+              <h1 class = "title">Events</h1>
+              <h2>Goodfellows:</h2>
+              <p>9:00pm Trivia</p>
+              <p>11:30pm Karaoke</p>
+
+              <h2>Might As Well: </h2>
+              <p>8:00pm trivia </p>
+            </div>
+            `;
+            document.getElementById("sun").style.backgroundColor = "#ffffffff";
+            document.getElementById("mon").style.backgroundColor = "#ffffffff";
+            document.getElementById("wed").style.backgroundColor = "#ffffffff";
+            document.getElementById("thurs").style.backgroundColor = "#87bfe7c7";
+            document.getElementById("tues").style.backgroundColor = "#ffffffff";
+            document.getElementById("fri").style.backgroundColor = "#ffffffff";
+            document.getElementById("sat").style.backgroundColor = "#ffffffff";
+
+          }
+          function fridaySpecials(){
+            const elem = document.getElementById("drinks");
+            elem.innerHTML = 
+            `<div> 
+
+              <h2>Goodfellows:</h2>
+              <p>$4.00 Margaritas</p>  
+              <p>1/2 off Bottles and Cans</p>
+
+              <h2>Might As Well:</h2>
+              <p>$3.00 House Tequila </p>
+              <p>$2.50 Landsharks</p>
+              <p>$3.00 Craft Bottles</p>
+              <p>$4.00 MAW-tinis</p>
+
+
+              <h2>Pantana Bob's:</h2>
+              <p>$3.00 Kansas City Ice Waters</p>
+              <p>$4.00 Local Drafts</p>
+
+              <h2>La Residence:</h2>
+              <p>$3.00 Mystery Shot Special </p>
+              <p>$4.00 Mimosas</p>
+
+              <h1 class = "title">Events</h1>
+              <p>No Events Today </p>
+            </div>
+            `;
+            document.getElementById("sun").style.backgroundColor = "#ffffffff";
+            document.getElementById("mon").style.backgroundColor = "#ffffffff";
+            document.getElementById("thurs").style.backgroundColor = "#ffffffff";
+            document.getElementById("wed").style.backgroundColor = "#ffffffff";
+            document.getElementById("fri").style.backgroundColor = "#87bfe7c7";
+            document.getElementById("tues").style.backgroundColor = "#ffffffff";
+            document.getElementById("sat").style.backgroundColor = "#ffffffff";
+
+          }
+          function saturdaySpecials(){
+            const elem = document.getElementById("drinks");
+            elem.innerHTML = 
+            `<div> 
+
+              <h2>Goodfellows:</h2>
+              <p>$2.50 Shooters</p>  
+              <p>$3.50 LITs</p>
+              <p>$3.00 Margaritas </p>
+
+              <h2>Pantana Bob's:</h2>
+              <p>$3.00 Kamikaze Shots</p>
+              <p>$3.00 House Tequila</p>
+              <p>$2.50 Landsharks</p>
+              <p>$2.50 Shocktops</p>
+
+
+              <h2>La Residence:</h2>
+              <p>$5.00 Mimosas </p>
+
+              <h1 class = "title">Events</h1>
+              <p>No Events Today </p>
+            </div>
+            `;
+            document.getElementById("sun").style.backgroundColor = "#ffffffff";
+            document.getElementById("mon").style.backgroundColor = "#ffffffff";
+            document.getElementById("thurs").style.backgroundColor = "#ffffffff";
+            document.getElementById("wed").style.backgroundColor = "#ffffffff";
+            document.getElementById("fri").style.backgroundColor = "#ffffffff";
+            document.getElementById("sat").style.backgroundColor = "#87bfe7c7";
+            document.getElementById("tues").style.backgroundColor = "#ffffffff";
+          }
+        
+      </script>
     </div>
 
     </div>
