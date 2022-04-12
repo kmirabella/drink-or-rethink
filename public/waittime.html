@@ -5,7 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="waittime.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .icon-bar {
+        width: 100%;
+        background-color: #555;
+        overflow: auto;
+    }
+    
+    .icon-bar a {
+        float: left;
+        width: 20%;
+        text-align: center;
+        padding: 12px 0;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 36px;
+    }
+    
+    .icon-bar a:hover {
+        background-color: #000;
+    }
+    
+    .active {
+        background-color: #04AA6D;
+    }
+</style>
 
 <body>
     <div class="title-container">
@@ -14,9 +39,9 @@
     <!-- Navbar -->
     <div class="navbar">
       <div class="bottomnav-centered">
-        <a href="homePage.html">Home</a>
-        <a href="waittime.html" class="active">Wait Times</a>
-        <a href="calendar.html">Calendar</a>
+        <a class="active" href="homePage.html"><i class="fa fa-home"></i></a>
+            <a href="waittime.html"><i class="fa fa-clock-o"></i></a>
+            <a href="calendar.html"><i class="fa fa-calendar"></i></a>
       </div>
     </div>
 
