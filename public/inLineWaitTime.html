@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<title>Wait Time</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="waittime.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .icon-bar {
+        width: 100%;
+        background-color: #555;
+        overflow: auto;
+    }
+    
+    .icon-bar a {
+        float: left;
+        width: 20%;
+        text-align: center;
+        padding: 12px 0;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 36px;
+    }
+    
+    .icon-bar a:hover {
+        background-color: #000;
+    }
+    
+    .active {
+        background-color: #04AA6D;
+    }
+    .bar-line-info {
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        top: 10%;
+        background-color: lightgray;
+        border-radius: 15px;
+        padding: 15px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .button {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-color: grey;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    .leaveLine {
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        background-color: #DF6F68;
+    }
+    .enterBar{
+        position: absolute;
+        top: 40%;
+        right: 10%;
+        background-color: #93CD8A;
+    }
+
+    .whileYouWait{
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        top: 48%;
+        background-color: lightgray;
+        border-radius: 15px;
+        padding-top: 0;
+        text-align: center;
+        font-size: 20px;
+    }
+    .otherWaitTimes{
+        position: absolute;
+        bottom: 13%;
+    }
+
+    /*column styling gotten from w3 schools*/
+    .column {
+        float: left;
+        width: 25%;
+    }   
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /*w3 school styling end*/
+
+</style>
+
+<body>
+    <div class="title-container">
+      <h1>Drink or Rethink</h1>
+    </div>
+    <div class="w3-container">
+        <div class="w3-container bar-line-info">
+            <p>You're currently in line at <strong>bar name</strong></p>
+            <p>The wait time is <strong>this many minutes</strong></p>
+        </div>
+
+        <button class="leaveLine w3-button button">Leave Line</button>
+        <button class="enterBar w3-button button">Enter Bar</button>
+
+        <div class="w3-container whileYouWait">
+            <p><strong>While you wait:</strong></p>
+            <p>What is the cover fee?</p>
+            <p>What type of music?</p>
+            <button class="w3-button button">Submit</button>
+        </div>
+
+        <div class="w3-container otherWaitTimes">
+            <div class="row">
+                <div class="column">
+                    <img src="./images/bobs.jpg" height="30px" width="30px">
+                    <strong>30 min</strong>
+                </div>
+                <div class="column">
+                    <img src="./images/bobs.jpg" height="30px" width="30px">
+                    <strong>25 min</strong>
+                </div>
+                <div class="column">
+                    <img src="./images/bobs.jpg" height="30px" width="30px">
+                    <strong>40 min</strong>
+                </div>
+                <div class="column">
+                    <img src="./images/bobs.jpg" height="30px" width="30px">
+                    <strong>10 min</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="bottomnav-centered">
+        <a href="homePage.html"><i class="fa fa-home"></i></a>
+            <a href=""><i class="fa fa-clock-o"></i></a>
+            <a href="calendar.html"><i class="fa fa-calendar"></i></a>
+      </div>
+    </div>
+
+</body>
+
+</html>

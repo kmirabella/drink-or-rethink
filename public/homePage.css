@@ -7,8 +7,8 @@
 }
 
 .bar-buttons {
-    padding-top: 7%;
-    padding-bottom: 10%;
+    padding-top: 20%;
+    padding-bottom: 20%;
 }
 
 .collapsible {
@@ -21,6 +21,7 @@
     text-align: left;
     outline: none;
     font-size: 15px;
+    position: relative;
 }
 
 .active,
@@ -32,7 +33,9 @@
     content: '\002B';
     color: white;
     font-weight: bold;
-    float: right;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
     margin-left: 5px;
 }
 
@@ -47,6 +50,38 @@
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
 }
+
+/*Sets positioning and style for the bar's IMAGE*/
+.barImage{
+    border-radius: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/*Sets positioning and style for the bar's main INFO*/
+.info{
+    display: inline-block;
+}
+.name{
+    font-weight: bold;
+    margin: 0;
+}
+
+/*Sets positioning and style for the bar's JOIN LINE BUTTON and +/-*/
+.joinLineButton{
+    background-color: #93CD8A;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    top: 35%;
+}
+.joinLineLink{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
 
 .navbar {
     background-color: #333;
