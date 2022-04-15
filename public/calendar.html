@@ -36,22 +36,25 @@
 
 <body>
     <div class="title-container">
-      <h1>Drink or Rethink</h1>
+      <h1 class="header">Drink or Rethink</h1>
       <div class= "calendar-row">
         <button class = "calendar-day" id ="sun" type = "button" onclick=sundaySpecials()>
-            Sun
+          Sun
         </button>
         <button class = "calendar-day" type = "button" id = "mon" onclick=mondaySpecials() >
           Mon
         </button>
         <button class = "calendar-day" type = "button" id = "tues" onclick = tuesdaySpecials()>
-          Tues
+          Tue
         </button>
         <button class = "calendar-day" type="button" id = "wed" onclick=wednesdaySpecials()>
           Wed
         </button>
+      </div>
+        <div class= "calendar-row2">
+
         <button class = "calendar-day" type = "button" id = "thurs" onclick=thursdaySpecials()>
-          Thurs
+          Thur
         </button>
         <button class = "calendar-day" type="button"  id = "fri"  onclick=fridaySpecials()>
           Fri
@@ -59,7 +62,7 @@
         <button class = "calendar-day" type="button" id="sat" onclick=saturdaySpecials()>
           Sat
         </button>
-      </div>
+        </div>
       <div class = "listOfDrinkSpecials">
         <h1 class="title">Drink Specials</h1>
         <div id="drinks"> 
@@ -116,10 +119,10 @@
             document.getElementById("sun").style.backgroundColor = "#87bfe7c7";  
             document.getElementById("mon").style.backgroundColor = "#ffffffff";
             document.getElementById("tues").style.backgroundColor = "#ffffffff";
+            document.getElementById("wed").style.backgroundColor = "#ffffffff";
             document.getElementById("thurs").style.backgroundColor = "#ffffffff";
             document.getElementById("fri").style.backgroundColor = "#ffffffff";
             document.getElementById("sat").style.backgroundColor = "#ffffffff";
-
 
            
           }
@@ -159,7 +162,6 @@
             document.getElementById("fri").style.backgroundColor = "#ffffffff";
             document.getElementById("sat").style.backgroundColor = "#ffffffff";
 
-
           }
           function tuesdaySpecials(){
             const elem = document.getElementById("drinks");
@@ -191,7 +193,6 @@
             document.getElementById("fri").style.backgroundColor = "#ffffffff";
             document.getElementById("sat").style.backgroundColor = "#ffffffff";
 
-
           }
           function wednesdaySpecials(){
             const elem = document.getElementById("drinks");
@@ -219,7 +220,6 @@
             document.getElementById("thurs").style.backgroundColor = "#ffffffff";
             document.getElementById("fri").style.backgroundColor = "#ffffffff";
             document.getElementById("sat").style.backgroundColor = "#ffffffff";
-
 
           }
           function thursdaySpecials(){
@@ -277,7 +277,6 @@
               <p>$3.00 Craft Bottles</p>
               <p>$4.00 MAW-tinis</p>
 
-
               <h2>Pantana Bob's:</h2>
               <p>$3.00 Kansas City Ice Waters</p>
               <p>$4.00 Local Drafts</p>
@@ -315,7 +314,6 @@
               <p>$2.50 Landsharks</p>
               <p>$2.50 Shocktops</p>
 
-
               <h2>La Residence:</h2>
               <p>$5.00 Mimosas </p>
 
@@ -339,12 +337,11 @@
     <!-- Navbar -->
     <div class="navbar">
       <div class="bottomnav-centered">
-       <a href="homePage.html"><i class="fa fa-home"></i></a>
+       <a class="active" href="homePage.html"><i class="fa fa-home"></i></a>
             <a href="waittime.html"><i class="fa fa-clock-o"></i></a>
             <a href="calendar.html"><i class="fa fa-calendar"></i></a>
       </div>
     </div>
-
 
   
 
