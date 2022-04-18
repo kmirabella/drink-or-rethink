@@ -1,22 +1,40 @@
+/* entire home screen container*/
+.home-container {
+    background-color: #424B64;
+}
+
+/* home screen title header container*/
 .title-container {
     position: absolute;
-    color: black;
     width: 100%;
     margin-left: center;
     text-align: center;
+
+}
+/* home screen title header*/
+.app-title {
+    font-size: 30px;
+    font-family: Arial;
+    font-weight: bold;
+    color: white;
 }
 
 .bar-buttons {
-    padding-top: 20%;
+    padding-top: 12%;
     padding-bottom: 20%;
-}
 
+}
+/*bar button before expanding*/
 .collapsible {
-    background-color: #777;
+    background-color: #7BAFD4;
     color: white;
     cursor: pointer;
-    padding: 18px;
-    width: 100%;
+    padding: 10px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+    border-radius: 15px;
     border: none;
     text-align: left;
     outline: none;
@@ -26,7 +44,13 @@
 
 .active,
 .collapsible:hover {
-    background-color: #555;
+    background-color: #7BAFD4;
+}
+
+.active,
+.collapsible:after {
+    background-color: #7BAFD4;
+    border-radius: 15px 15px 0px 0px ;
 }
 
 .collapsible:after {
@@ -37,18 +61,25 @@
     bottom: 5%;
     right: 5%;
     margin-left: 5px;
+   
 }
 
 .active:after {
     content: "\2212";
 }
 
+/*bar button expansion drink specials and hours*/
 .content {
     padding: 0 18px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 0px 0px 15px 15px;
     max-height: 0;
+    color: #424B64;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    background-color: #f1f1f1;
+    background-color:  #c4d9e6;
+
 }
 
 /*Sets positioning and style for the bar's IMAGE*/
@@ -61,6 +92,7 @@
 /*Sets positioning and style for the bar's main INFO*/
 .info{
     display: inline-block;
+ 
 }
 .name{
     font-weight: bold;
@@ -69,12 +101,12 @@
 
 /*Sets positioning and style for the bar's JOIN LINE BUTTON and +/-*/
 .joinLineButton{
-    background-color: #93CD8A;
+    background-color: #08A97E;
     padding: 5px;
     border-radius: 5px;
     position: absolute;
-    right: 20px;
-    top: 35%;
+    right: 10px;
+    top: 10%;
 }
 .joinLineLink{
     text-decoration: none;
