@@ -1,11 +1,18 @@
+body{
+    background-color: #424b64;
+}
+
 .title-container {
     position: absolute;
-    color: black;
+    color: white;
     width: 100%;
     margin-left: center;
     text-align: center;
 }
-
+.header{
+    font-weight: bold;
+    font-size: 36px; 
+}
 .navbar {
     background-color: #555;
     overflow: hidden;

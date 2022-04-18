@@ -20,11 +20,6 @@ body{
     margin-top: 8px; 
 }
 .header{
-  justify-content: center;
-  padding-top: 5px;
-  height: 60px;
-  margin-top: 0px;
-  margin-bottom: 0px;
   background-color: #424b64;
   color: #ffffff;
   font-weight: bold;
@@ -33,9 +28,9 @@ body{
   background-color: #08A97E;
 }
 .calendar-row{
-  height: 70px; 
+  height: 65px; 
   width: 300px;
-  margin-left: 25px;
+  margin-left: 30px;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -54,8 +49,8 @@ body{
   border-radius: 10px;
   width: 100px;
   color: #00484C;
-  height: 60px;
-  margin-right:8px; 
+  height: 55px;
+  margin-right:5px; 
   font-size: 26px;
   font-weight: bold;
 }

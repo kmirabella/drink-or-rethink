@@ -103,7 +103,7 @@
 
 <body>
     <div class="title-container">
-        <h1>Drink or Rethink</h1>
+        <h1 class = "header">Drink or Rethink</h1>
     </div>
     <div class="w3-container">
         <div class="w3-container bar-line-info">
@@ -112,7 +112,12 @@
         </div>
 
         <button class="leaveLine w3-button button">Leave Line</button>
-        <button class="enterBar w3-button button">Enter Bar</button>
+        <button class="enterBar w3-button button" onclick="enterBar()">Enter Bar</button>
+        <script>
+            function enterBar(){
+                window.location.href= "./enteredBar.html";
+            }
+        </script>
 
         <div class="w3-container whileYouWait">
             <p><strong>While you wait:</strong></p>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<title>Calendar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="enteredBar.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="calendar.js" type="module"></script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+
+
+<body>
+    <div class="title-container">
+        <h1 class="header">Drink or Rethink</h1>
+        <div>
+            <h1 class = "congrats">Congratulations, you're in!</h1>
+            <button type = "button" class = "back-home" onclick = "homeClick()">Back to Home</button>
+            <script>
+                function homeClick(){
+                    window.location.href= "./homePage.html";                }
+            </script>
+        </div>
+    </div>
+
+      <!-- Navbar -->
+      <div class="navbar">
+        <div class="bottomnav-centered">
+            <a href="homePage.html"><i class="fa fa-home"></i></a>
+            <a href=""><i class="fa fa-clock-o"></i></a>
+            <a href="calendar.html"><i class="fa fa-calendar"></i></a>
+        </div>
+    </div>
+</body>
+</html>

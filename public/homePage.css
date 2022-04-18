@@ -18,14 +18,14 @@
 /* home screen title header*/
 
 .app-title {
-    font-size: 30px;
+    font-size: 36px;
     font-family: Arial;
     font-weight: bold;
     color: white;
 }
 
 .bar-buttons {
-    padding-top: 12%;
+    padding-top: 14%;
     padding-bottom: 20%;
 }
 
