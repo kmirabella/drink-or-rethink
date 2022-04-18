@@ -1,25 +1,20 @@
-<<<<<<< HEAD
-body{
-    background-color: #424b64;
-=======
 .inline-container {
     background-color: #424B64;
->>>>>>> ebe733c693dee17a95af0cd21c660c9f8603fae0
 }
-
+body{    
+    background-color: #424B64;
+}
 .title-container {
     position: absolute;
     color: white;
-<<<<<<< HEAD
-=======
     background-color: #424B64;
->>>>>>> ebe733c693dee17a95af0cd21c660c9f8603fae0
     width: 100%;
     margin-left: center;
     text-align: center;
 }
 .header{
     font-weight: bold;
+    color: white; 
     font-size: 36px; 
 }
 .navbar {
