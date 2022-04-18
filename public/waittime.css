@@ -1,7 +1,9 @@
 .inline-container {
     background-color: #424B64;
 }
-
+body{    
+    background-color: #424B64;
+}
 .title-container {
     position: absolute;
     color: white;
@@ -12,6 +14,7 @@
 }
 .header{
     font-weight: bold;
+    color: white; 
     font-size: 36px; 
 }
 .navbar {
