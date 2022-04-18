@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 body{
     background-color: #424b64;
+=======
+.inline-container {
+    background-color: #424B64;
+>>>>>>> ebe733c693dee17a95af0cd21c660c9f8603fae0
 }
 
 .title-container {
     position: absolute;
     color: white;
+<<<<<<< HEAD
+=======
+    background-color: #424B64;
+>>>>>>> ebe733c693dee17a95af0cd21c660c9f8603fae0
     width: 100%;
     margin-left: center;
     text-align: center;
@@ -49,3 +58,43 @@ body{
     background-color: #7bafd4;
     color: white;
 }
+
+.barform {
+    padding:0%;
+}
+
+.wait {
+    font-size: 20px;
+    margin-top: 2%;
+    margin-bottom: 0%;
+}
+
+.formquestions {
+    margin-top: 2%;
+    margin-bottom: 0%;
+    font-size: 20px;
+}
+
+.coverfee  {
+    width:30%;
+    text-align: center;
+    border-width: 0px;
+    border-radius: 10px;
+}
+
+.musicType {
+    text-align: center;
+    border-width: 0px;
+    border-radius: 10px;
+    height: 35px;
+}
+
+#submitbutton {
+    margin-top: 5%;
+    margin-bottom: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+

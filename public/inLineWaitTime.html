@@ -30,6 +30,10 @@
     .active {
         background-color: #04AA6D;
     }
+    .inline-container {
+    background-color: #424B64;
+}
+
     
     .bar-line-info {
         position: absolute;
@@ -60,6 +64,10 @@
         top: 40%;
         left: 10%;
         background-color: #DF6F68;
+        padding: 0%;
+        font-size: 20px;
+        width: 140px;
+        height: 50px;
     }
     
     .enterBar {
@@ -67,6 +75,10 @@
         top: 40%;
         right: 10%;
         background-color: #93CD8A;
+        padding: 0%;
+        font-size: 20px;
+        width: 140px;
+        height: 50px;
     }
     
     .whileYouWait {
@@ -83,7 +95,8 @@
     
     .otherWaitTimes {
         position: absolute;
-        bottom: 13%;
+        bottom: 11%;
+        color: black;
     }
     /*column styling gotten from w3 schools*/
     
@@ -102,13 +115,14 @@
 </style>
 
 <body>
+
     <div class="title-container">
         <h1 class = "header">Drink or Rethink</h1>
     </div>
-    <div class="w3-container">
+    <div class="w3-container inline-container">
         <div class="w3-container bar-line-info">
-            <p>You're currently in line at <strong>bar name</strong></p>
-            <p>The wait time is <strong>this many minutes</strong></p>
+            <p>You're currently in line at <br><strong>bar name</strong></p>
+            <p>The wait time is<br> <strong>this many minutes</strong></p>
         </div>
 
         <button class="leaveLine w3-button button">Leave Line</button>
@@ -119,33 +133,40 @@
             }
         </script>
 
-        <div class="w3-container whileYouWait">
-            <p><strong>While you wait:</strong></p>
-            <p>What is the cover fee?</p>
-
-            <p>What type of music?</p>
-
-            <button class="w3-button button">Submit</button>
-
+        <div class="w3-container whileYouWait" id="barForm">
+            <div class="barform">
+                <p class="wait"><strong>While you wait:</strong></p>
+                <p class="formquestions">What is the cover fee?</p>
+                    <input class="coverfee" type="number" id="money" placeholder="0.00" required/>
+                <p class="formquestions">What type of music?</p>
+                    <select class="musicType" id="music">
+                        <option value="HousePlaylist">Select a Type</option>
+                        <option value="HousePlaylist">House Playlist</option>
+                        <option value="LiveBand">Live Band</option>
+                        <option value="DJ">DJ</option>
+                    </select>
+                <button class="w3-button button" id="submitbutton" onclick="submit()">Submit</button>
+            </div>
+            
         </div>
 
         <div class="w3-container otherWaitTimes">
             <div class="row">
                 <div class="column">
                     <img src="./images/bobs.jpg" height="30px" width="30px">
-                    <strong>30 min</strong>
+                    <strong>30 mins</strong>
                 </div>
                 <div class="column">
                     <img src="./images/bobs.jpg" height="30px" width="30px">
-                    <strong>25 min</strong>
+                    <strong>25 mins</strong>
                 </div>
                 <div class="column">
                     <img src="./images/bobs.jpg" height="30px" width="30px">
-                    <strong>40 min</strong>
+                    <strong>40 mins</strong>
                 </div>
                 <div class="column">
                     <img src="./images/bobs.jpg" height="30px" width="30px">
-                    <strong>10 min</strong>
+                    <strong>10 mins</strong>
                 </div>
             </div>
         </div>
@@ -161,5 +182,11 @@
     </div>
 
 </body>
+
+<script>
+    function submit() {
+        document.getElementById("barForm").innerHTML="Thank You For Your Feedback";
+    }
+</script>
 
 </html>
