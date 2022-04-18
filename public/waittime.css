@@ -67,3 +67,41 @@
     background-color: #87bfe7c7;
     color: white;
 }
+
+.barform {
+    padding:0%;
+}
+
+.wait {
+    font-size: 20px;
+    margin-top: 2%;
+    margin-bottom: 0%;
+}
+
+.formquestions {
+    margin-top: 2%;
+    margin-bottom: 0%;
+    font-size: 20px;
+}
+
+.coverfee  {
+    width:30%;
+    text-align: center;
+    border-width: 0px;
+    border-radius: 10px;
+}
+
+.musicType {
+    text-align: center;
+    border-width: 0px;
+    border-radius: 10px;
+    height: 35px;
+}
+
+#submitbutton {
+   
+    margin-top: 5%;
+    margin-bottom: 3%;
+   
+}
+
