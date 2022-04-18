@@ -29,14 +29,12 @@
         background-color: #000;
     }
     
-    .active {
-        background-color: #04AA6D;
-    }
 </style>
 
 <body>
     <div class="title-container">
       <h1 class="header">Drink or Rethink</h1>
+      <div class = "content">
       <div class= "calendar-row">
         <button class = "calendar-day" id ="sun" type = "button" onclick=sundaySpecials()>
           Sun
@@ -54,7 +52,7 @@
         <div class= "calendar-row2">
 
         <button class = "calendar-day" type = "button" id = "thurs" onclick=thursdaySpecials()>
-          Thur
+          Thu
         </button>
         <button class = "calendar-day" type="button"  id = "fri"  onclick=fridaySpecials()>
           Fri
@@ -64,7 +62,8 @@
         </button>
         </div>
       <div class = "listOfDrinkSpecials">
-        <h1 class="title">Drink Specials</h1>
+        <img class="barImage" src="./images/martini-glass.jpeg" width="50px" height="70px">
+        <h1 class="title">Drink <br>Specials</h1>
         <div id="drinks"> 
             <h2> Goodfellows: </h2>
             <p>$2.50 Shooters</p>
@@ -85,7 +84,8 @@
 
             <h2>La Residence:</h2>
             <p>$4.00 Mimosas </p>
-           
+
+            <img class="micImage" src="./images/mic.png" width="55px" height="55px">
             <h1 class = "title">Events</h1>
             <p>No Events Today</p>
         </div>
@@ -112,17 +112,18 @@
               <p>$3 House Vodka</p>
               <p>$4 Rumplemintz </p>
 
+              <img class="micImage" src="./images/mic.png"   width="55px" height="55px">
               <h1 class = "title">Events</h1>
               <p>No Events Today</p>
             </div>
             `;
-            document.getElementById("sun").style.backgroundColor = "#87bfe7c7";  
-            document.getElementById("mon").style.backgroundColor = "#ffffffff";
-            document.getElementById("tues").style.backgroundColor = "#ffffffff";
-            document.getElementById("wed").style.backgroundColor = "#ffffffff";
-            document.getElementById("thurs").style.backgroundColor = "#ffffffff";
-            document.getElementById("fri").style.backgroundColor = "#ffffffff";
-            document.getElementById("sat").style.backgroundColor = "#ffffffff";
+            document.getElementById("sun").style.backgroundColor = "#08A97E";  
+            document.getElementById("mon").style.backgroundColor = "#7BAFD4";
+            document.getElementById("tues").style.backgroundColor = "#7BAFD4";
+            document.getElementById("wed").style.backgroundColor = "#7BAFD4";
+            document.getElementById("thurs").style.backgroundColor = "#7BAFD4";
+            document.getElementById("fri").style.backgroundColor = "#7BAFD4";
+            document.getElementById("sat").style.backgroundColor = "#7BAFD4";
 
            
           }
@@ -150,17 +151,18 @@
               <h2>La Residence:</h2>
               <p>$4.00 Mimosas </p>
              
+              <img class="micImage" src="./images/mic.png"  width="55px" height="55px">
               <h1 class = "title">Events</h1>
               <p>No Events Today</p>
             </div>
             `;
-            document.getElementById("sun").style.backgroundColor = "#ffffffff";
-            document.getElementById("mon").style.backgroundColor = "#87bfe7c7";
-            document.getElementById("tues").style.backgroundColor = "#ffffffff";
-            document.getElementById("wed").style.backgroundColor = "#ffffffff";
-            document.getElementById("thurs").style.backgroundColor = "#ffffffff";
-            document.getElementById("fri").style.backgroundColor = "#ffffffff";
-            document.getElementById("sat").style.backgroundColor = "#ffffffff";
+            document.getElementById("mon").style.backgroundColor = "#08A97E";  
+            document.getElementById("sun").style.backgroundColor = "#7BAFD4";
+            document.getElementById("tues").style.backgroundColor = "#7BAFD4";
+            document.getElementById("wed").style.backgroundColor = "#7BAFD4";
+            document.getElementById("thurs").style.backgroundColor = "#7BAFD4";
+            document.getElementById("fri").style.backgroundColor = "#7BAFD4";
+            document.getElementById("sat").style.backgroundColor = "#7BAFD4";
 
           }
           function tuesdaySpecials(){
@@ -179,19 +181,20 @@
               <p>$2.50 NC Drafts </p>
               <p>$1.00 off Bottles and Cans </p>
 
+              <img class="micImage" src="./images/mic.png"  width="55px" height="55px">
               <h1 class = "title">Events</h1>
               <h2>Goodfellows:</h2>
               <p>9:00pm Trivia</p>
               <p>11:30pm Karaoke</p>
             </div>
             `;
-            document.getElementById("sun").style.backgroundColor = "#ffffffff";
-            document.getElementById("mon").style.backgroundColor = "#ffffffff";
-            document.getElementById("tues").style.backgroundColor = "#87bfe7c7";
-            document.getElementById("wed").style.backgroundColor = "#ffffffff";
-            document.getElementById("thurs").style.backgroundColor = "#ffffffff";
-            document.getElementById("fri").style.backgroundColor = "#ffffffff";
-            document.getElementById("sat").style.backgroundColor = "#ffffffff";
+            document.getElementById("tues").style.backgroundColor = "#08A97E";  
+            document.getElementById("sun").style.backgroundColor = "#7BAFD4";
+            document.getElementById("mon").style.backgroundColor = "#7BAFD4";
+            document.getElementById("wed").style.backgroundColor = "#7BAFD4";
+            document.getElementById("thurs").style.backgroundColor = "#7BAFD4";
+            document.getElementById("fri").style.backgroundColor = "#7BAFD4";
+            document.getElementById("sat").style.backgroundColor = "#7BAFD4";
 
           }
           function wednesdaySpecials(){
@@ -209,17 +212,18 @@
               <p>1/2 off Glasses of Wine</p>
               <p>$5 Specialty Cocktails</p>
 
+            <img class="micImage" src="./images/mic.png"   width="55px" height="55px">
               <h1 class = "title">Events</h1>
               <p>No Events Today </p>
             </div>
             `;
-            document.getElementById("sun").style.backgroundColor = "#ffffffff";
-            document.getElementById("mon").style.backgroundColor = "#ffffffff";
-            document.getElementById("wed").style.backgroundColor = "#87bfe7c7";
-            document.getElementById("tues").style.backgroundColor = "#ffffffff";
-            document.getElementById("thurs").style.backgroundColor = "#ffffffff";
-            document.getElementById("fri").style.backgroundColor = "#ffffffff";
-            document.getElementById("sat").style.backgroundColor = "#ffffffff";
+            document.getElementById("wed").style.backgroundColor = "#08A97E";  
+            document.getElementById("sun").style.backgroundColor = "#7BAFD4";
+            document.getElementById("mon").style.backgroundColor = "#7BAFD4";
+            document.getElementById("tues").style.backgroundColor = "#7BAFD4";
+            document.getElementById("thurs").style.backgroundColor = "#7BAFD4";
+            document.getElementById("fri").style.backgroundColor = "#7BAFD4";
+            document.getElementById("sat").style.backgroundColor = "#7BAFD4";
 
           }
           function thursdaySpecials(){
@@ -244,6 +248,7 @@
               <p>$4.00 Mimosas </p>
               <p>$1.00 off all fireball shots</p>
 
+              <img class="micImage" src="./images/mic.png" width="55px" height="55px">
               <h1 class = "title">Events</h1>
               <h2>Goodfellows:</h2>
               <p>9:00pm Trivia</p>
@@ -253,13 +258,13 @@
               <p>8:00pm trivia </p>
             </div>
             `;
-            document.getElementById("sun").style.backgroundColor = "#ffffffff";
-            document.getElementById("mon").style.backgroundColor = "#ffffffff";
-            document.getElementById("wed").style.backgroundColor = "#ffffffff";
-            document.getElementById("thurs").style.backgroundColor = "#87bfe7c7";
-            document.getElementById("tues").style.backgroundColor = "#ffffffff";
-            document.getElementById("fri").style.backgroundColor = "#ffffffff";
-            document.getElementById("sat").style.backgroundColor = "#ffffffff";
+            document.getElementById("thurs").style.backgroundColor = "#08A97E";  
+            document.getElementById("sun").style.backgroundColor = "#7BAFD4";
+            document.getElementById("mon").style.backgroundColor = "#7BAFD4";
+            document.getElementById("tues").style.backgroundColor = "#7BAFD4";
+            document.getElementById("wed").style.backgroundColor = "#7BAFD4";
+            document.getElementById("fri").style.backgroundColor = "#7BAFD4";
+            document.getElementById("sat").style.backgroundColor = "#7BAFD4";
 
           }
           function fridaySpecials(){
@@ -285,17 +290,18 @@
               <p>$3.00 Mystery Shot Special </p>
               <p>$4.00 Mimosas</p>
 
+              <img class="micImage" src="./images/mic.png" width="55px" height="55px">
               <h1 class = "title">Events</h1>
               <p>No Events Today </p>
             </div>
             `;
-            document.getElementById("sun").style.backgroundColor = "#ffffffff";
-            document.getElementById("mon").style.backgroundColor = "#ffffffff";
-            document.getElementById("thurs").style.backgroundColor = "#ffffffff";
-            document.getElementById("wed").style.backgroundColor = "#ffffffff";
-            document.getElementById("fri").style.backgroundColor = "#87bfe7c7";
-            document.getElementById("tues").style.backgroundColor = "#ffffffff";
-            document.getElementById("sat").style.backgroundColor = "#ffffffff";
+            document.getElementById("fri").style.backgroundColor = "#08A97E";  
+            document.getElementById("sun").style.backgroundColor = "#7BAFD4";
+            document.getElementById("mon").style.backgroundColor = "#7BAFD4";
+            document.getElementById("tues").style.backgroundColor = "#7BAFD4";
+            document.getElementById("wed").style.backgroundColor = "#7BAFD4";
+            document.getElementById("thurs").style.backgroundColor = "#7BAFD4";
+            document.getElementById("sat").style.backgroundColor = "#7BAFD4";
 
           }
           function saturdaySpecials(){
@@ -317,33 +323,35 @@
               <h2>La Residence:</h2>
               <p>$5.00 Mimosas </p>
 
+              <img class="micImage" src="./images/mic.png" width="55px" height="55px">
               <h1 class = "title">Events</h1>
               <p>No Events Today </p>
             </div>
             `;
-            document.getElementById("sun").style.backgroundColor = "#ffffffff";
-            document.getElementById("mon").style.backgroundColor = "#ffffffff";
-            document.getElementById("thurs").style.backgroundColor = "#ffffffff";
-            document.getElementById("wed").style.backgroundColor = "#ffffffff";
-            document.getElementById("fri").style.backgroundColor = "#ffffffff";
-            document.getElementById("sat").style.backgroundColor = "#87bfe7c7";
-            document.getElementById("tues").style.backgroundColor = "#ffffffff";
+            document.getElementById("sat").style.backgroundColor = "#08A97E";  
+            document.getElementById("sun").style.backgroundColor = "#7BAFD4";
+            document.getElementById("mon").style.backgroundColor = "#7BAFD4";
+            document.getElementById("tues").style.backgroundColor = "#7BAFD4";
+            document.getElementById("wed").style.backgroundColor = "#7BAFD4";
+            document.getElementById("thurs").style.backgroundColor = "#7BAFD4";
+            document.getElementById("fri").style.backgroundColor = "#7BAFD4";
           }
         
       </script>
-    </div>
-
-    </div>
-    <!-- Navbar -->
-    <div class="navbar">
-      <div class="bottomnav-centered">
-       <a class="active" href="homePage.html"><i class="fa fa-home"></i></a>
-            <a href="waittime.html"><i class="fa fa-clock-o"></i></a>
-            <a href="calendar.html"><i class="fa fa-calendar"></i></a>
       </div>
+    
+        <!-- Navbar -->
+        <div class="navbar">
+          <div class="bottomnav-centered">
+           <a class="active" href="homePage.html"><i class="fa fa-home"></i></a>
+                <a href="waittime.html"><i class="fa fa-clock-o"></i></a>
+                <a href="calendar.html"><i class="fa fa-calendar"></i></a>
+          </div>
+        </div>
+    
+    </div>
     </div>
 
-  
 
 </body>
 

@@ -1,76 +1,106 @@
+body{
+  background-color: #424b64;
+}
 .title-container {
-  position: absolute;
-  color:black;
-  text-align: center;
-  max-width: 360px;
-  margin-left: 5%;
-  margin-right: 5%;
-
+  position: relative;
+    text-align: center;
+  justify-content: center;
+}
+.barImage{
+    display: inline;
+    position:absolute;
+    left: 35px;
+    top: 225px;
+    justify-content: left;
+}
+.micImage{
+    display: inline;
+    position: absolute;
+    left: 35px;
+    margin-top: 8px; 
 }
 .header{
   justify-content: center;
+  padding-top: 5px;
+  height: 60px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: #424b64;
+  color: #ffffff;
+  font-weight: bold;
 }
 #mon{
-  background-color: #87bfe7c7;
+  background-color: #08A97E;
 }
 .calendar-row{
-  padding-right: 50px;
-  height: 80px; 
+  height: 70px; 
   width: 300px;
+  margin-left: 25px;
   display: flex;
   justify-content: space-between;
   text-align: center;
 }
 .calendar-row2{
-  padding-right: 50px;
-  height: 80px; 
-  width: 300px;
-  margin-left: 30px; 
+  height: 60px; 
+  width: 250px;
+  margin-left: 55px;
   display: flex;
   justify-content: space-between;
   text-align: center;
 }
 .calendar-day{
-  border: 5px solid #87bfe7c7;
+  border: 3px;
+  background-color: #7bafd4;
+  border-radius: 10px;
   width: 100px;
-  background-color: white;
-  margin-top: 10px; 
-  font-size: 30px;
+  color: #00484C;
+  height: 60px;
+  margin-right:8px; 
+  font-size: 26px;
+  font-weight: bold;
 }
 
 .calendar-day:hover{
-  background-color:lightgrey;
+  background-color:darkgray;
 }
 .calendar-day:active{
   display: block;
-  background-color:#87bfe7c7 ;
+  background-color:#08A97E;
   justify-content:center;
 }
 .listOfDrinkSpecials{
   display: inline-block;
-  background-color: #87bfe7c7 ; 
-  border-radius: 5px;
+  background-color: #7bafd4 ; 
+  border-radius: 10px;  
+  border:5px solid #7bafd4;
   width: 90%;
-  text-align: center; 
-  margin-top: 20px; 
-  margin-bottom: 80px;
+  margin-top: 10px; 
+  margin-bottom: 95px;
 }
 .title{
-font-size: 50px; 
-font-weight: bold;
+  display: inline;
+  justify-content: right;
+  font-size: 40px; 
+  font-weight: bold;
+   color: #00484c;
+
 }
 
 
 h2{
   font-size: 25px; 
   font-style: italic;
+  color: #ffffff;
+
 }
 p{
   font-size: 20px; 
   font-style:normal;
+  color: #ffffff;
+
 }
 .navbar {
-  background-color: #333;
+  background-color: #555;
   overflow: hidden;
   position: fixed;
   bottom: 0;
@@ -79,13 +109,13 @@ p{
 
 /* Style the links inside the navigation bar */
 .navbar a {
-  float:left;
-  display: block;
-  color: #f2f2f2;
+  float: left;
+  width: 33%;
   text-align: center;
-  padding: 20px 50px;
-  text-decoration: none;
-  font-size: 17px;
+  padding: 14px 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
 }
 
 /* Change the color of links on hover */
@@ -96,7 +126,7 @@ p{
 
 /* Add a color to the active/current link */
 .navbar a.active {
-  background-color: #87bfe7c7;
+  background-color: #7bafd4;
   color: white;
 }
 
