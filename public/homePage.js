@@ -15,42 +15,12 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-/*
 
-let barList =
-[
-  {
-    img: "images/bobs.jpg",
-    name: "Pantana Bobs"
 
-  }
-];
 
-export const renderPlayerCard = function(bar) {
-    let string = `
-    <img width="20%" height="20%" src="${bar.img}"></img>
- <h3 style="color: black"> ${bar.name}</h3>
+  
+  const bar = document.getElementsByClassName('name') 
+  console.log(bar);
  
-<br>
- 
- `;
-return string;
-};
 
-
-export const loadBarsIntoDOM = function(bars) {
-    const $root = $('#root');
-    bars.forEach(bar => {
-        $root.append(renderPlayerCard(bar));
-
-    });
-
-}
-
-$(function() {
-    loadBarsIntoDOM(barList);
-    console.log(barList);
-})
-
-*/
 

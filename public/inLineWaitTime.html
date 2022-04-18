@@ -139,8 +139,8 @@
                 <p class="formquestions">What is the cover fee?</p>
                     <input class="coverfee" type="number" id="money" placeholder="0.00" required/>
                 <p class="formquestions">What type of music?</p>
-                    <select class="musicType" id="music">
-                        <option value="HousePlaylist">Select a Type</option>
+                    <select class="musicType" id="music" required>
+                        <option value="select">Select a Type</option>
                         <option value="HousePlaylist">House Playlist</option>
                         <option value="LiveBand">Live Band</option>
                         <option value="DJ">DJ</option>
@@ -185,6 +185,13 @@
 
 <script>
     function submit() {
+        var option = document.getElementById("music");
+        var finalOption = option.value;
+        console.log(finalOption);
+        if (finalOption == "select") {
+            
+            return;
+        }
         document.getElementById("barForm").innerHTML="Thank You For Your Feedback";
     }
 </script>
