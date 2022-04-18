@@ -1,17 +1,22 @@
 /* entire home screen container*/
+
 .home-container {
     background-color: #424B64;
 }
 
+
 /* home screen title header container*/
+
 .title-container {
     position: absolute;
     width: 100%;
     margin-left: center;
     text-align: center;
-
 }
+
+
 /* home screen title header*/
+
 .app-title {
     font-size: 30px;
     font-family: Arial;
@@ -22,9 +27,11 @@
 .bar-buttons {
     padding-top: 12%;
     padding-bottom: 20%;
-
 }
+
+
 /*bar button before expanding*/
+
 .collapsible {
     background-color: #7BAFD4;
     color: white;
@@ -50,7 +57,7 @@
 .active,
 .collapsible:after {
     background-color: #7BAFD4;
-    border-radius: 15px 15px 0px 0px ;
+    border-radius: 15px 15px 0px 0px;
 }
 
 .collapsible:after {
@@ -61,14 +68,15 @@
     bottom: 5%;
     right: 5%;
     margin-left: 5px;
-   
 }
 
 .active:after {
     content: "\2212";
 }
 
+
 /*bar button expansion drink specials and hours*/
+
 .content {
     padding: 0 18px;
     margin-left: 5%;
@@ -78,29 +86,34 @@
     color: #424B64;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    background-color:  #c4d9e6;
-
+    background-color: #c4d9e6;
 }
 
+
 /*Sets positioning and style for the bar's IMAGE*/
-.barImage{
+
+.barImage {
     border-radius: 20px;
     display: inline-block;
     vertical-align: top;
 }
 
+
 /*Sets positioning and style for the bar's main INFO*/
-.info{
+
+.info {
     display: inline-block;
- 
 }
-.name{
+
+.name {
     font-weight: bold;
     margin: 0;
 }
 
+
 /*Sets positioning and style for the bar's JOIN LINE BUTTON and +/-*/
-.joinLineButton{
+
+.joinLineButton {
     background-color: #08A97E;
     padding: 5px;
     border-radius: 5px;
@@ -108,15 +121,15 @@
     right: 10px;
     top: 10%;
 }
-.joinLineLink{
+
+.joinLineLink {
     text-decoration: none;
     font-weight: bold;
     color: black;
 }
 
-
 .navbar {
-    background-color: #333;
+    background-color: #555;
     overflow: hidden;
     position: fixed;
     bottom: 0;
@@ -128,12 +141,12 @@
 
 .navbar a {
     float: left;
-    display: block;
-    color: #f2f2f2;
+    width: 33%;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
 }
 
 
@@ -148,31 +161,6 @@
 /* Add a color to the active/current link */
 
 .navbar a.active {
-    background-color: #87bfe7c7;
-    color: white;
-}
-
-.navbar {
-    width: 100%;
-    background-color: #555;
-    overflow: auto;
-}
-
-.navbar a {
-    float: left;
-    width: 15%;
-    text-align: center;
-    padding: 14px 16px;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 36px;
-}
-
-.navbar a:hover {
-    background-color: #87bfe7c7;
-}
-
-.navbar a.active {
-    background-color: #87bfe7c7;
+    background-color: #7bafd4;
     color: white;
 }
