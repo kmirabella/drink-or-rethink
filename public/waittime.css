@@ -1,6 +1,11 @@
+.inline-container {
+    background-color: #424B64;
+}
+
 .title-container {
     position: absolute;
-    color: black;
+    color: white;
+    background-color: #424B64;
     width: 100%;
     margin-left: center;
     text-align: center;
@@ -74,9 +79,11 @@
 }
 
 #submitbutton {
-   
     margin-top: 5%;
     margin-bottom: 3%;
-   
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 
