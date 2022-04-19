@@ -6,27 +6,19 @@
     background-size: cover;
   
 }
-#overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.4;
-}
+
 .typewriter h1 {
     font-family:  'Helvetica Neue';
     color: #7BAFD4;
     overflow: hidden;
     border-right: .03em solid transparent;
-    font-size: 60px;
+    font-size: 50px;
     padding-top: 10%;
     padding-left: 2%;
     white-space: nowrap;
     margin: 0 auto;/* Gives that scrolling effect as the typing happens */
     letter-spacing: .1em;/* Adjust as needed */
-    animation: typing 5s steps(60, end), step-end infinite;
+    animation: typing 3s steps(60, end), step-end infinite;
   }
 
 @keyframes typing {
@@ -40,10 +32,12 @@
 
 
 
-.container-heading {
+.container-homepage {
     position: absolute;
-    color:rgb(225, 225, 225);
+    background-color: #424B64;
+    color: white;
     width: 100%;
+    height: 100%;
     margin-left: center;
     text-align: center;
 
@@ -88,7 +82,7 @@
     display: inline-block;
     position: relative;
     transition: 0.5s;
-    margin-top: 5%;
+    margin-top: 3%;
     
   }
   
