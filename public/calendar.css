@@ -1,131 +1,145 @@
-body{
-  background-color: #424b64;
+body {
+    background-color: #424b64;
 }
+
 .title-container {
-  position: relative;
+    position: relative;
     text-align: center;
-  justify-content: center;
+    justify-content: center;
 }
-.barImage{
+
+.barImage {
     display: inline;
-    position:absolute;
+    position: absolute;
     left: 35px;
     top: 225px;
     justify-content: left;
 }
-.micImage{
+
+.micImage {
     display: inline;
     position: absolute;
     left: 35px;
-    margin-top: 8px; 
-}
-.header{
-  background-color: #424b64;
-  color: #ffffff;
-  font-weight: bold;
-}
-#mon{
-  background-color: #08A97E;
-}
-.calendar-row{
-  height: 65px; 
-  width: 300px;
-  margin-left: 30px;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-}
-.calendar-row2{
-  height: 60px; 
-  width: 250px;
-  margin-left: 55px;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-}
-.calendar-day{
-  border: 3px;
-  background-color: #7bafd4;
-  border-radius: 10px;
-  width: 100px;
-  color: #00484C;
-  height: 55px;
-  margin-right:5px; 
-  font-size: 26px;
-  font-weight: bold;
+    margin-top: 8px;
 }
 
-.calendar-day:hover{
-  background-color:darkgray;
-}
-.calendar-day:active{
-  display: block;
-  background-color:#08A97E;
-  justify-content:center;
-}
-.listOfDrinkSpecials{
-  display: inline-block;
-  background-color: #7bafd4 ; 
-  border-radius: 15px;  
-  border:5px solid #7bafd4;
-  width: 90%;
-  margin-top: 10px; 
-  margin-bottom: 95px;
-}
-.title{
-  display: inline;
-  justify-content: center;
-  font-size: 35px;
-  font-weight: bold;
-  color: #00484c;
-
+.header {
+    background-color: #424b64;
+    color: #ffffff;
+    font-weight: bold;
 }
 
-
-h2{
-  font-size: 25px; 
-  font-style: italic;
-  color: #ffffff;
-  padding:0%;
-  margin: 0%;
-
+#mon {
+    background-color: #08A97E;
 }
-p{
-  font-size: 20px; 
-  font-style:normal;
-  color: #ffffff;
-  padding:0%;
-  margin: 0%;
 
+.calendar-row {
+    height: 65px;
+    width: 300px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 }
+
+.calendar-row2 {
+    height: 60px;
+    width: 250px;
+    margin-left: 55px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.calendar-day {
+    border: 3px;
+    background-color: #7bafd4;
+    border-radius: 10px;
+    width: 100px;
+    color: #00484C;
+    height: 55px;
+    margin-right: 5px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.calendar-day:hover {
+    background-color: darkgray;
+}
+
+.calendar-day:active {
+    display: block;
+    background-color: #08A97E;
+    justify-content: center;
+}
+
+.listOfDrinkSpecials {
+    display: inline-block;
+    background-color: #7bafd4;
+    border-radius: 15px;
+    border: 5px solid #7bafd4;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 95px;
+}
+
+.title {
+    display: inline;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: #00484c;
+}
+
+h2 {
+    font-size: 25px;
+    font-style: italic;
+    color: #00484C;
+    padding: 0%;
+    margin: 0%;
+}
+
+p {
+    font-size: 20px;
+    font-style: normal;
+    color: #ffffff;
+    padding: 0%;
+    margin: 0%;
+}
+
 .navbar {
-  background-color: #555;
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+    background-color: #555;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
+
 
 /* Style the links inside the navigation bar */
+
 .navbar a {
-  float: left;
-  width: 33%;
-  text-align: center;
-  padding: 14px 16px;
-  transition: all 0.3s ease;
-  color: white;
-  font-size: 36px;
+    float: left;
+    width: 33%;
+    text-align: center;
+    padding: 14px 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
 }
+
 
 /* Change the color of links on hover */
+
 .navbar a:hover {
-  background-color: #ddd;
-  color: black;
+    background-color: #ddd;
+    color: black;
 }
+
 
 /* Add a color to the active/current link */
-.navbar a.active {
-  background-color: #7bafd4;
-  color: white;
-}
 
+.navbar a.active {
+    background-color: #7bafd4;
+    color: white;
+}
