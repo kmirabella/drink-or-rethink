@@ -49,6 +49,7 @@ body {
     display: flex;
     justify-content: space-between;
     text-align: center;
+    margin-top: -11px;
 }
 
 .calendar-day {
@@ -57,7 +58,7 @@ body {
     border-radius: 10px;
     width: 100px;
     color: #00484C;
-    height: 55px;
+    height: 40px;
     margin-right: 5px;
     font-size: 26px;
     font-weight: bold;

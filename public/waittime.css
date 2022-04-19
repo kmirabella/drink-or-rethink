@@ -1,9 +1,11 @@
 .inline-container {
     background-color: #424B64;
 }
-body{    
+
+body {
     background-color: #424B64;
 }
+
 .title-container {
     position: absolute;
     color: white;
@@ -12,11 +14,13 @@ body{
     margin-left: center;
     text-align: center;
 }
-.header{
+
+.header {
     font-weight: bold;
-    color: white; 
-    font-size: 36px; 
+    color: white;
+    font-size: 36px;
 }
+
 .navbar {
     background-color: #555;
     overflow: hidden;
@@ -55,7 +59,7 @@ body{
 }
 
 .barform {
-    padding:0%;
+    padding: 0%;
 }
 
 .wait {
@@ -70,8 +74,8 @@ body{
     font-size: 20px;
 }
 
-.coverfee  {
-    width:30%;
+.coverfee {
+    width: 30%;
     text-align: center;
     border-width: 0px;
     border-radius: 10px;
@@ -93,3 +97,6 @@ body{
     padding-right: 4%;
 }
 
+p {
+    color: #00484c;
+}

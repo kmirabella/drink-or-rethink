@@ -30,10 +30,10 @@
     .active {
         background-color: #04AA6D;
     }
+    
     .inline-container {
-    background-color: #424B64;
-}
-
+        background-color: #424B64;
+    }
     
     .bar-line-info {
         position: absolute;
@@ -99,10 +99,7 @@
         color: white;
         font-weight: 250;
         font-size: 20px;
-    
     }
-
-
     /*column styling gotten from w3 schools*/
     
     .column {
@@ -122,7 +119,7 @@
 <body>
 
     <div class="title-container">
-        <h1 class = "header">Drink or Rethink</h1>
+        <h1 class="header">Drink or Rethink</h1>
     </div>
     <div class="w3-container inline-container">
         <div class="w3-container bar-line-info">
@@ -133,8 +130,8 @@
         <button class="leaveLine w3-button button">Leave Line</button>
         <button class="enterBar w3-button button" onclick="enterBar()">Enter Bar</button>
         <script>
-            function enterBar(){
-                window.location.href= "./enteredBar.html";
+            function enterBar() {
+                window.location.href = "./enteredBar.html";
             }
         </script>
 
@@ -142,9 +139,9 @@
             <div class="barform">
                 <p class="wait"><strong>While you wait:</strong></p>
                 <p class="formquestions">What is the cover fee?</p>
-                    <input class="coverfee" type="number" id="money" placeholder="0.00" required/>
+                <input class="coverfee" type="number" id="money" placeholder="0.00" required/>
                 <p class="formquestions">What type of music?</p>
-                    <select class="musicType" id="music" required>
+                <select class="musicType" id="music" required>
                         <option value="select">Select a Type</option>
                         <option value="HousePlaylist">House Playlist</option>
                         <option value="LiveBand">Live Band</option>
@@ -152,7 +149,7 @@
                     </select>
                 <button class="w3-button button" id="submitbutton" onclick="submit()">Submit</button>
             </div>
-            
+
         </div>
 
         <div class="w3-container otherWaitTimes">
@@ -194,10 +191,9 @@
         var finalOption = option.value;
         console.log(finalOption);
         if (finalOption == "select") {
-            
             return;
         }
-        document.getElementById("barForm").innerHTML="Thank You For Your Feedback";
+        document.getElementById("barForm").innerHTML = "Thank You For Your Feedback";
     }
 </script>
 
