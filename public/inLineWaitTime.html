@@ -34,6 +34,9 @@
     .inline-container {
         background-color: #424B64;
     }
+    img{
+        padding-right: 4px; 
+    }
     
     .bar-line-info {
         position: absolute;
@@ -42,7 +45,7 @@
         top: 10%;
         background-color: lightgray;
         border-radius: 15px;
-        padding: 15px;
+        padding: 5px;
         text-align: center;
         font-size: 20px;
     }
@@ -61,9 +64,10 @@
     
     .leaveLine {
         position: absolute;
-        top: 40%;
+        top: 35%;
         left: 10%;
         background-color: #DF6F68;
+        border: none; 
         padding: 0%;
         font-size: 20px;
         width: 140px;
@@ -72,9 +76,10 @@
     
     .enterBar {
         position: absolute;
-        top: 40%;
+        top: 35%;
         right: 10%;
-        background-color: #93CD8A;
+        background-color: #08A97E;
+        border:none; 
         padding: 0%;
         font-size: 20px;
         width: 140px;
@@ -85,7 +90,7 @@
         position: absolute;
         left: 10%;
         right: 10%;
-        top: 48%;
+        top: 43%;
         background-color: lightgray;
         border-radius: 15px;
         padding-top: 0;
@@ -95,16 +100,22 @@
     
     .otherWaitTimes {
         position: absolute;
-        bottom: 11%;
+        bottom: 13%;
+        left:0%;
         color: white;
+        margin-left: 0px;
+        margin-right: 0px; 
         font-weight: 250;
-        font-size: 20px;
+        font-size: 250;
     }
     /*column styling gotten from w3 schools*/
     
     .column {
         float: left;
+        text-align: right;
         width: 25%;
+        padding-right: 8px;
+        font-weight: bold;
     }
     /* Clear floats after the columns */
     
@@ -113,6 +124,10 @@
         display: table;
         clear: both;
     }
+    p{
+        margin-top: 5px;
+    }
+
     /*w3 school styling end*/
 </style>
 
@@ -139,10 +154,10 @@
             <div class="barform">
                 <p class="wait"><strong>While you wait:</strong></p>
                 <p class="formquestions">What is the cover fee?</p>
-                <input class="coverfee" type="number" id="money" placeholder="0.00" required/>
+                <input class="coverfee" type="number" id="money" placeholder="$0" required/>
                 <p class="formquestions">What type of music?</p>
                 <select class="musicType" id="music" required>
-                        <option value="select">Select a Type</option>
+                        <option value="select" >Select a Type</option>
                         <option value="HousePlaylist">House Playlist</option>
                         <option value="LiveBand">Live Band</option>
                         <option value="DJ">DJ</option>
@@ -155,20 +170,20 @@
         <div class="w3-container otherWaitTimes">
             <div class="row">
                 <div class="column">
-                    <img src="./images/bobs.jpg" height="30px" width="30px">
-                    <strong>30 mins</strong>
+                    <img src="./images/LaRes.png" height="40px" width="40px">
+                    <strong>30 min</strong>
                 </div>
                 <div class="column">
-                    <img src="./images/bobs.jpg" height="30px" width="30px">
-                    <strong>25 mins</strong>
+                    <img src="./images/GoodFellows.png" height="40px" width="40px">
+                    <strong>25 min</strong>
                 </div>
                 <div class="column">
-                    <img src="./images/bobs.jpg" height="30px" width="30px">
-                    <strong>40 mins</strong>
+                    <img src="./images/HesNot.png" height="40px" width="40px">
+                    <strong>40 min</strong>
                 </div>
                 <div class="column">
-                    <img src="./images/bobs.jpg" height="30px" width="30px">
-                    <strong>10 mins</strong>
+                    <img src="./images/MAW.png" height="40px" width="40px">
+                    <strong>10 min</strong>
                 </div>
             </div>
         </div>
