@@ -101,3 +101,7 @@ body {
 p {
     color: #00484c;
 }
+
+.expandedWait {
+    align-content: center;
+}

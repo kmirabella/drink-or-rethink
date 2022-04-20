@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="waittime.css">
+<script src="global.js" type="module"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script src="https://kit.fontawesome.com/29f2f280f3.js" crossorigin="anonymous"></script>
 <style>
@@ -117,13 +118,34 @@
         padding-right: 8px;
         font-weight: bold;
     }
+
+    .columnExpand {
+        float: left;
+        margin-top: 8%;
+        margin-bottom: 0%;
+        text-align: center;
+        width: 40%;
+        padding-right: 0px;
+        font-weight: bold;
+        font-size: 22px;
+        margin-left: 7%;
+    }
+
+    .rowExpanded {
+        align-content: center;
+        margin: 10%;
+        width: 100%;
+
+    }
     /* Clear floats after the columns */
     
     .row:after {
         content: "";
         display: table;
         clear: both;
+        margin-bottom: 0%;
     }
+   
     p{
         margin-top: 5px;
     }
@@ -173,22 +195,22 @@
 
         </div>
 
-        <div class="w3-container otherWaitTimes">
+        <div id="otherWait" class="w3-container otherWaitTimes">
             <div class="row">
                 <div class="column">
-                    <img src="./images/LaRes.png" height="40px" width="40px">
+                    <img onclick="returnHome()" src="./images/LaRes.png" height="40px" width="40px">
                     <strong>30 min</strong>
                 </div>
                 <div class="column">
-                    <img src="./images/GoodFellows.png" height="40px" width="40px">
+                    <img onclick="returnHome()" src="./images/GoodFellows.png" height="40px" width="40px">
                     <strong>25 min</strong>
                 </div>
                 <div class="column">
-                    <img src="./images/HesNot.png" height="40px" width="40px">
+                    <img onclick="returnHome()" src="./images/HesNot.png" height="40px" width="40px">
                     <strong>40 min</strong>
                 </div>
                 <div class="column">
-                    <img src="./images/MAW.png" height="40px" width="40px">
+                    <img onclick="returnHome()" src="./images/MAW.png" height="40px" width="40px">
                     <strong>10 min</strong>
                 </div>
             </div>
@@ -215,6 +237,33 @@
             return;
         }
         document.getElementById("barForm").innerHTML = "Thank You For Your Feedback";
+        document.getElementById("otherWait").innerHTML = 
+        `
+            <div class="expandedWait">
+                <div class="rowExpanded">
+                    <div class="columnExpand">
+                        <img onclick="returnHome()" src="./images/LaRes.png" height="85px" width="85px">
+                        <strong>30 min</strong>
+                    </div>
+                    <div class="columnExpand">
+                        <img onclick="returnHome()" src="./images/GoodFellows.png" height="85px" width="85px">
+                        <br><strong>25 min</strong>
+                    </div>
+                </div>
+                <div class="rowExpanded">
+                    <div class="columnExpand">
+                        <img onclick="returnHome()" src="./images/HesNot.png" height="85px" width="85px">
+                        <br><strong>40 min</strong>
+                    </div>
+                    <div class="columnExpand">
+                        <img onclick="returnHome()" src="./images/MAW.png" height="85px" width="85px">
+                        <br><strong>10 min</strong>
+                    </div>
+                </div>
+            </div>
+        
+        `
+       
     }
 </script>
 
