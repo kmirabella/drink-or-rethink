@@ -9,7 +9,12 @@ body{
     text-align: center;
 }
 
-
+.logo{
+  width: 350px;
+  height: 80px;
+  display:block;
+margin:auto;
+}
 .header{
     font-size: 36px; 
     font-weight:bold;

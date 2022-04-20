@@ -19,6 +19,13 @@ body {
 .drinkSpecials {
     font-size: 30px;
 }
+.logo{
+    width: 350px;
+    height: 80px;
+    display:block;
+  margin:auto;
+  margin-bottom: 10px;
+}
 
 .eventSpecials {
     font-size: 30px;

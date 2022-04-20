@@ -14,7 +14,13 @@ body {
     margin-left: center;
     text-align: center;
 }
-
+.logo{
+    width: 350px;
+    height: 80px;
+    display:block;
+  margin:auto;
+  margin-bottom:10px;
+  }
 .header {
     font-weight: bold;
     color: white;
