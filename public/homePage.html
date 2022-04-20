@@ -39,31 +39,28 @@
 
 <body>
   <div class="home-container">
-    <div class="title-container">
-        <h1 class="app-title">Drink or Rethink</h1>
-    </div>
-    <div class="date-container">
-      <h3 id="homepage-date"> Date</h3>
-      <script>
-        window.onload = function(){
-          var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-          const d = new Date();
-          let day = d.toLocaleDateString("en-US", options);
-          document.getElementById("homepage-date").innerHTML = 
-              `<div>
-                  <p class="date"> ${day}</p>
-              <div>`
-            }
-      </script>
-
-    </div>
-
-
 
     <div class="bar-buttons">
-        <button type="button" class="collapsible"> 
+      <img class="logo" src="images/logo.png"></img>
+      <div class="date-container">
+        <h3 id="homepage-date"> Date</h3>
+        <script>
+          window.onload = function(){
+            var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const d = new Date();
+            let day = d.toLocaleDateString("en-US", options);
+            document.getElementById("homepage-date").innerHTML = 
+                `<div>
+                    <p class="date"> ${day}</p>
+                <div>`
+              }
+        </script>
+  
+      </div>
+      
+        <button type="button" class="collapsible" id = "bobs"> 
         <img class="barImage" src="./images/PantanaBobs.png" height="80px" width="80px">
-        <div class="info">
+        <div  class="info">
           <p class="name">Pantana Bobs</p>
           Wait time: <br> Cover Fee: $10.00 <br> Music: DJ
           <div class="joinLineButton">

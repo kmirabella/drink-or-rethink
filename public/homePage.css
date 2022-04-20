@@ -7,18 +7,22 @@
 
 
 .date-container {
-    position: absolute;
     width: 100%;
-    margin-left: center;
     text-align: center;
-    margin-top: 35px;
-    margin-bottom: 5px;
 
 }
 
 .date {
     color: white;
-    font-size: 18px;
+    font-family:'lovelo';
+    margin:0;
+    font-size: 20px;
+}
+.logo{
+    width: 350px;
+    height: 80px;
+    display:block;
+  margin:auto;
 }
 
 /* home screen title header container*/
@@ -31,6 +35,7 @@
 }
 
 
+
 /* home screen title header*/
 
 .app-title {
@@ -41,14 +46,18 @@
 }
 
 .bar-buttons {
-    padding-top: 20%;
     padding-bottom: 20%;
+    
 }
 
 
 
 
 /*bar button before expanding*/
+#bobs{
+    margin-top:0px;
+}
+
 
 .collapsible {
     background-color: #7BAFD4;
