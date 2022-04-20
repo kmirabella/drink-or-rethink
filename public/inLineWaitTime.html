@@ -142,11 +142,17 @@
             <p>The wait time is<br> <strong>this many minutes</strong></p>
         </div>
 
-        <button class="leaveLine w3-button button">Leave Line</button>
+        <button class="leaveLine w3-button button" onclick="returnHome()">Leave Line</button>
         <button class="enterBar w3-button button" onclick="enterBar()">Enter Bar</button>
         <script>
             function enterBar() {
                 window.location.href = "./enteredBar.html";
+            }
+        </script>
+
+        <script>
+            function returnHome() {
+                window.location.href = "./homePage.html";
             }
         </script>
 
