@@ -43,12 +43,12 @@
         <h1 class="app-title">Drink or Rethink</h1>
     </div>
     <div class="date-container">
-      <h3 id="homepage-date"> Today is</h3>
+      <h3 id="homepage-date"> Date</h3>
       <script>
         window.onload = function(){
-          const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+          var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
           const d = new Date();
-          let day = weekday[d.getDay()];
+          let day = d.toLocaleDateString("en-US", options);
           document.getElementById("homepage-date").innerHTML = 
               `<div>
                   <p class="date"> ${day}</p>
@@ -72,11 +72,12 @@
         </div>
       </button>
         <div class="content">
-            <h5><em>Drink Specials:</em></h5>
-            <h6> $6.00 Kansas City Ice Water <br> $2.50 Pitchers <br> 8:00pm Trivia
-            </h6>
-            <h5><em>Hours:</em></h5>
-            <h6>3:00pm - 2:00am</h6>
+
+              <h5 class="specials-title"><em>Drink Specials:</em></h5> 
+              <h6 class="drinks"> $6.00 Kansas City Ice Water <br> $2.50 Pitchers <br> 8:00pm Trivia</h6>
+
+            <h5><em>Hours: </em> 3:00pm - 2:00am</h5>
+            
         </div>
 
         <button type="button" class="collapsible"> 
@@ -91,11 +92,10 @@
       </button>
 
         <div class="content">
-            <h5><em>Drink Specials:</em></h5>
-            <h6>$2.00 Ball Shooters <br> $2.50 Domestic Beers <br> 10:00pm Karaoke
+            <h5 class="specials-title"><em>Drink Specials:</em></h5>
+            <h6 class="drinks">$2.00 Ball Shooters <br> $2.50 Domestic Beers <br> 10:00pm Karaoke
             </h6>
-            <h5><em>Hours:</em></h5>
-            <h6>7:00pm - 2:00am</h6>
+            <h5><em>Hours:</em> 7:00pm - 2:00am</h5>
         </div>
 
 
@@ -110,10 +110,9 @@
         </div>
       </button>
         <div class="content">
-            <h5><em>Specials:</em></h5>
-            <h6>$5.00 Blue Cups</h6>
-            <h5><em>Hours:</em></h5>
-            <h6>4:00pm - 2:00am</h6>
+            <h5 class="specials-title"><em>Drink Specials:</em></h5>
+            <h6 class="drinks">$5.00 Blue Cups</h6>
+            <h5><em>Hours: 4:00pm - 2:00am</em></h5>
         </div>
 
         <button type="button" class="collapsible"> 
@@ -128,10 +127,9 @@
       </button>
 
         <div class="content">
-            <h5><em>Specials:</em></h5>
-            <h6>$4.00 Mimosas</h6>
-            <h5><em>Hours:</em></h5>
-            <h6>5:00pm - 11:00pm</h6>
+            <h5 class="specials-title"><em>Drink Specials:</em></h5>
+            <h6 class="drinks">$4.00 Mimosas</h6>
+            <h5><em>Hours: 5:00pm - 11:00pm</em></h5>
         </div>
 
         <button type="button" class="collapsible"> 
@@ -146,11 +144,11 @@
       </button>
 
         <div class="content">
-            <h5><em>Specials:</em></h5>
-            <h6> $3.00 Wine $3.00 Craft Bottles $4.00 MAW-tinis
+            <h5 class="specials-title"><em>Drink Specials:</em></h5>
+            <h6 class="drinks"> $3.00 Wine <br>$3.00 Craft Bottles <br>$4.00 MAW-tinis
             </h6>
-            <h5><em>Hours:</em></h5>
-            <h6>4:00pm - 2:00am</h6>
+            <h5><em>Hours: 4:00pm - 2:00am</em></h5>
+            
         </div>
 
     </div>

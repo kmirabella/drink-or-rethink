@@ -4,6 +4,8 @@
     background-color: #424B64;
 }
 
+
+
 .date-container {
     position: absolute;
     width: 100%;
@@ -42,6 +44,8 @@
     padding-top: 20%;
     padding-bottom: 20%;
 }
+
+
 
 
 /*bar button before expanding*/
@@ -149,6 +153,20 @@
     bottom: 0;
     width: 100%;
     height:8%;
+}
+
+.specials-title {
+    margin: 0%;
+    margin-top: 2%;
+    padding:0%;
+
+}
+
+.drinks {
+    margin: 0%;
+    padding:0%;
+    margin-left: 6%;
+
 }
 
 
