@@ -5,15 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="homePage.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="homePage.js"></script>
 <script src="homePage.js" type="module"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/29f2f280f3.js" crossorigin="anonymous"></script>
+
 <style>
     .icon-bar {
         width: 100%;
         background-color: #555;
         overflow: auto;
+        
     }
     
     .icon-bar a {
@@ -24,6 +27,7 @@
         transition: all 0.3s ease;
         color: white;
         font-size: 36px;
+       
     }
     
     .icon-bar a:hover {
@@ -37,6 +41,21 @@
   <div class="home-container">
     <div class="title-container">
         <h1 class="app-title">Drink or Rethink</h1>
+    </div>
+    <div class="date-container">
+      <h3 id="homepage-date"> Today is</h3>
+      <script>
+        window.onload = function(){
+          const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+          const d = new Date();
+          let day = weekday[d.getDay()];
+          document.getElementById("homepage-date").innerHTML = 
+              `<div>
+                  <p class="date"> ${day}</p>
+              <div>`
+            }
+      </script>
+
     </div>
 
 
@@ -141,9 +160,9 @@
     <!-- Navbar -->
     <div class="navbar">
         <div class="bottomnav-centered">
-            <a href="homePage.html"><i class="fa fa-home"></i></a>
-            <a href="waittime.html"><i class="fa fa-clock-o"></i></a>
-            <a href="calendar.html"><i class="fa fa-calendar"></i></a>
+            <a href="homePage.html"><i class="fa-solid fa-home"></i></a>
+            <a href="waittime.html"><i class="fa fa-hourglass"></i></a>
+            <a href="calendar.html"><i class="fa-solid fa-calendar-week"></i></a>
         </div>
     </div> 
 
@@ -151,6 +170,8 @@
 
 
 </body>
+
+
 
 
 </html>
