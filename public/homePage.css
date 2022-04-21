@@ -134,6 +134,7 @@
 
 .name {
     font-weight: bold;
+    color: #00484C;
     margin: 0;
 }
 
@@ -168,6 +169,7 @@
     margin: 0%;
     margin-top: 2%;
     padding:0%;
+    font-weight: bold; 
 
 }
 
