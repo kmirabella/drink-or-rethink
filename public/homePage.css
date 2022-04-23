@@ -140,6 +140,7 @@
 
 
 /*Sets positioning and style for the bar's JOIN LINE BUTTON and +/-*/
+    /* background color of 'In Line' button is set in renderInLineHomepage.js */
 
 .joinLineButton {
     background-color: #08A97E;

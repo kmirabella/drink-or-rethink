@@ -10,6 +10,7 @@
 <script src="global.js" type="module"></script>
 <script src="homePage.js" type="module"></script>
 <script src="scripts/navBarCreation.js"></script>
+<script src="scripts/renderInLineHomepage.js"></script>
 <script src="https://kit.fontawesome.com/29f2f280f3.js" crossorigin="anonymous"></script>
 
 <style>
@@ -61,7 +62,7 @@
   
       </div>
       
-        <button type="button" class="collapsible" id = "bobs"> 
+      <button type="button" class="collapsible" id = "bobs"> 
         <img class="barImage" src="./images/PantanaBobs.png" height="80px" width="80px">
         <div  class="info">
           <p class="name">Pantana Bobs</p>
@@ -70,9 +71,11 @@
           <span id="bobsCoverFee">Cover Fee: $10.00</span>
           <br>
           <span id="bobsMusic">Music: DJ</span>
-          <div class="joinLineButton">
-            <a class="joinLineLink" id="line" onclick="joinLine('bobs')" href="inLineWaitTime.html">Join Line</a>
-          </div>
+          <span id="bobsJoinLine">
+            <div class="joinLineButton">
+              <a class="joinLineLink" id="line" onclick="joinLine('bobs')" href="inLineWaitTime.html">Join Line</a>
+            </div>
+          </span>
         </div>
       </button>
         <div class="content">
@@ -84,7 +87,7 @@
             
         </div>
 
-        <button type="button" class="collapsible"> 
+      <button type="button" class="collapsible"> 
         <img class="barImage" src="./images/GoodFellows.png" height="80px" width="80px">
         <div class="info">
           <p class="name">Goodfellows</p>
@@ -93,9 +96,11 @@
           <span id="goodfellowsCoverFee">Cover Fee: None</span>
           <br>
           <span id="goodfellowsMusic">Music: House Playlist</span>
-          <div class="joinLineButton">
-            <a class="joinLineLink" id="line" onclick="joinLine('goodfellows')"  href="inLineWaitTime.html">Join Line</a>
-          </div>
+          <span id="goodfellowsJoinLine">
+            <div class="joinLineButton">
+              <a class="joinLineLink" id="line" onclick="joinLine('goodfellows')"  href="inLineWaitTime.html">Join Line</a>
+            </div>
+          </span>
         </div>
       </button>
 
@@ -107,8 +112,8 @@
         </div>
 
 
-        <button type="button" class="collapsible"> 
-      <img class="barImage" src="./images/HesNot.png" height="80px" width="80px">
+      <button type="button" class="collapsible"> 
+        <img class="barImage" src="./images/HesNot.png" height="80px" width="80px">
         <div class="info">
           <p class="name">He's Not Here</p>
           <span id="hesNotWaitTime">Wait Time: 15min</span>
@@ -116,9 +121,11 @@
           <span id="hesNotCoverFee">Cover Fee: $5.00</span>
           <br>
           <span id="hesNotMusic">Music: Live Band</span>
-          <div class="joinLineButton">
-            <a class="joinLineLink" id="line" onclick="joinLine('hesNot')"  href="inLineWaitTime.html">Join Line</a>
-          </div>
+          <span id="hesNotJoinLine">
+            <div class="joinLineButton">
+              <a class="joinLineLink" id="line" onclick="joinLine('hesNot')"  href="inLineWaitTime.html">Join Line</a>
+            </div>
+          </span>
         </div>
       </button>
         <div class="content">
@@ -127,7 +134,7 @@
             <h5><strong em>Hours: </strong em>4:00pm - 2:00am</h5>
         </div>
 
-        <button type="button" class="collapsible"> 
+      <button type="button" class="collapsible"> 
         <img class="barImage" src="./images/LaRes.png" height="80px" width="80px">
         <div class="info">
           <p class="name">La Residence</p>
@@ -136,9 +143,11 @@
           <span id="laResCoverFee">Cover Fee: None</span>
           <br>
           <span id="laResMusic">Music: DJ</span>
-          <div class="joinLineButton">
-            <a class="joinLineLink" id="line" onclick="joinLine('laRes')"href="inLineWaitTime.html">Join Line</a>
-          </div>
+          <span id="laResJoinLine">
+            <div class="joinLineButton">
+              <a class="joinLineLink" id="line" onclick="joinLine('laRes')"href="inLineWaitTime.html">Join Line</a>
+            </div>
+          </span>
         </div>
       </button>
 
@@ -148,7 +157,7 @@
             <h5><strong em>Hours: </strong em>5:00pm - 11:00pm</h5>
         </div>
 
-        <button type="button" class="collapsible"> 
+      <button type="button" class="collapsible"> 
         <img class="barImage" src="./images/MAW.png" height="80px" width="80px">
         <div class="info">
           <p class="name">Might As Well</p>
@@ -157,9 +166,13 @@
           <span id="mawCoverFee">Cover Fee: None</span>
           <br>
           <span id="mawMusic">Music: House Playlist</span>
-          <div class="joinLineButton">
-            <a class="joinLineLink" id="line" onclick="joinLine('maw')" href="inLineWaitTime.html">Join Line</a>
-          </div>
+          <span id="mawJoinLine">
+            <div class="joinLineButton">
+              <a class="joinLineLink" id="line" onclick="joinLine('maw')" href="inLineWaitTime.html">Join Line</a>
+            </div>
+          </span>
+          
+          
         </div>
       </button>
 
@@ -214,7 +227,9 @@
 
 
       // this determines how the page should render (looks at if the user is in line or not)
-
+      if (sessionStorage.getItem('inLine') === 'true') {
+        renderInLineHomepage();
+      }
 
     </script>
 
