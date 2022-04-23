@@ -8,6 +8,8 @@
 
 .date-container {
     width: 100%;
+    margin: 0%;
+    padding:0%;
     text-align: center;
 
 }
@@ -15,20 +17,24 @@
 .date {
     color: white;
     font-family:'lovelo';
-    margin:0;
     font-size: 20px;
+    margin: 0%;
+    padding: 0%;
+    top:0%;
 }
 .logo{
     width: 350px;
     height: 80px;
     display:block;
-  margin:auto;
+    align-content: center;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
 }
 
 /* home screen title header container*/
 
 .title-container {
-    position: absolute;
+    position: ab solute;
     width: 100%;
     margin-left: center;
     text-align: center;
@@ -144,11 +150,11 @@
 
 .joinLineButton {
     background-color: #08A97E;
-    padding: 5px;
+    padding: 3px;
     border-radius: 5px;
     position: absolute;
-    right: 10px;
-    top: 10%;
+    right: 6px;
+    top: 48%;
 }
 
 .joinLineLink {
