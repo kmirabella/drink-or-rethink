@@ -386,14 +386,28 @@
         <!-- Navbar -->
         <div class="navbar">
             <div class="bottomnav-centered">
-                <a href="homePage.html"><i class="fa-solid fa-home"></i></a>
-                <a href="waittime.html"><i class="fa fa-hourglass"></i></a>
-                <a href="calendar.html"><i class="fa-solid fa-calendar-week"></i></a>
+                <span id="navigation"></span>
             </div>
         </div>
 
     </div>
     </div>
+
+    <script>
+        // this determines if the navbar should take you to inLineWaitTime.html or just waitTime.html
+        if (sessionStorage.getItem('inLine') === "true") {
+            document.getElementById("navigation").innerHTML = `
+                <a href="homePage.html"><i class="fa-solid fa-home"></i></a>
+                <a href="inLineWaitTime.html"><i class="fa fa-hourglass"></i></a>
+                <a href="calendar.html"><i class="fa-solid fa-calendar-week"></i></a>
+                `;
+        } else {
+            document.getElementById("navigation").innerHTML = `
+                <a href="homePage.html"><i class="fa-solid fa-home"></i></a>
+                <a href="waitTime.html"><i class="fa fa-hourglass"></i></a>
+                <a href="calendar.html"><i class="fa-solid fa-calendar-week"></i></a>`;
+        }  
+    </script>
 
 
 </body>

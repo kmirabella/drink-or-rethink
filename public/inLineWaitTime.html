@@ -165,8 +165,8 @@
          </a>    </div>
     <div class="w3-container inline-container">
         <div class="w3-container bar-line-info">
-            <p>You're currently in line at <br><strong>bar name</strong></p>
-            <p>The wait time is<br> <strong>this many minutes</strong></p>
+            <p>You're currently in line at <br><strong><span id="currentlyInLine"></span></strong></p>
+            <p>The wait time is<br> <strong><span id="currentWaitTime"></span></strong></p>
         </div>
 
         <button class="leaveLine w3-button button" onclick="returnHome()">Leave Line</button>
@@ -184,50 +184,19 @@
         </script>
 
         <div class="w3-container whileYouWait" id="barForm">
-            <div class="barform">
-                <p class="wait"><strong>While you wait:</strong></p>
-                <p class="formquestions">What is the cover fee?</p>
-                <input class="coverfee" type="number" id="money" placeholder="$0" required/>
-                <p class="formquestions">What type of music?</p>
-                <select class="musicType" id="music" required>
-                        <option value="select" >Select a Type</option>
-                        <option value="HousePlaylist">House Playlist</option>
-                        <option value="LiveBand">Live Band</option>
-                        <option value="DJ">DJ</option>
-                    </select>
-                <button class="w3-button button" id="submitbutton" onclick="submit()">Submit</button>
-            </div>
-
+            <span id="survey"></span>
         </div>
 
         <div id="otherWait" class="w3-container otherWaitTimes">
-            <div class="row">
-                <div class="column">
-                    <img onclick="returnHome()" src="./images/LaRes.png" height="40px" width="40px">
-                    <strong>30 min</strong>
-                </div>
-                <div class="column">
-                    <img onclick="returnHome()" src="./images/GoodFellows.png" height="40px" width="40px">
-                    <strong>25 min</strong>
-                </div>
-                <div class="column">
-                    <img onclick="returnHome()" src="./images/HesNot.png" height="40px" width="40px">
-                    <strong>40 min</strong>
-                </div>
-                <div class="column">
-                    <img onclick="returnHome()" src="./images/MAW.png" height="40px" width="40px">
-                    <strong>10 min</strong>
-                </div>
-            </div>
+            
         </div>
     </div>
 
     <!-- Navbar -->
     <div class="navbar">
         <div class="bottomnav-centered">
-            <a href="homePage.html"><i class="fa-solid fa-home"></i></a>
-            <a href="waittime.html"><i class="fa fa-hourglass"></i></a>
-            <a href="calendar.html"><i class="fa-solid fa-calendar-week"></i></a>
+            <span id="navigation"></span>
+                
         </div>
     </div>
 
@@ -241,35 +210,403 @@
         if (finalOption == "select") {
             return;
         }
+
+        sessionStorage.setItem('completedSurvey', "true");
+
+        renderCompletedSurveyPage();
+    }
+
+    function renderCompletedSurveyPage() {
         document.getElementById("barForm").innerHTML = "Thank You For Your Feedback";
-        document.getElementById("otherWait").innerHTML = 
+
+        //expands the other wait times after the survey has been completed
+        if (sessionStorage.getItem("currentBar") === 'bobs') {
+            document.getElementById("otherWait").innerHTML = 
+            `
+                <div class="expandedWait">
+                    <div class="rowExpanded">
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/LaRes.png" height="85px" width="85px">
+                            <strong><span id="laResWaitTime"></span></strong>
+                        </div>
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/GoodFellows.png" height="85px" width="85px">
+                            <br><strong><span id="goodfellowsWaitTime"></span></strong>
+                        </div>
+                    </div>
+                    <div class="rowExpanded">
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/HesNot.png" height="85px" width="85px">
+                            <br><strong><span id="hesNotWaitTime"></span></strong>
+                        </div>
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/MAW.png" height="85px" width="85px">
+                            <br><strong><span id="mawWaitTime"></span></strong>
+                        </div>
+                    </div>
+                </div>
+            
+            `;
+
+            // updates the expanted wait times to match what their current wait time is
+            document.getElementById("laResWaitTime").innerHTML = sessionStorage.getItem("laResWaitTime");
+            document.getElementById("goodfellowsWaitTime").innerHTML = sessionStorage.getItem("goodfellowsWaitTime");
+            document.getElementById("hesNotWaitTime").innerHTML = sessionStorage.getItem("hesNotWaitTime");
+            document.getElementById("mawWaitTime").innerHTML = sessionStorage.getItem("mawWaitTime");
+        } else if (sessionStorage.getItem("currentBar") === 'goodfellows') {
+            document.getElementById("otherWait").innerHTML = 
+            `
+                <div class="expandedWait">
+                    <div class="rowExpanded">
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/LaRes.png" height="85px" width="85px">
+                            <strong><span id="laResWaitTime"></span></strong>
+                        </div>
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/PantanaBobs.png" height="85px" width="85px">
+                            <br><strong><span id="bobsWaitTime"></span></strong>
+                        </div>
+                    </div>
+                    <div class="rowExpanded">
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/HesNot.png" height="85px" width="85px">
+                            <br><strong><span id="hesNotWaitTime"></span></strong>
+                        </div>
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/MAW.png" height="85px" width="85px">
+                            <br><strong><span id="mawWaitTime"></span></strong>
+                        </div>
+                    </div>
+                </div>
+            
+            `;
+            // updates the other wait times to match what the current wait time is
+            document.getElementById("laResWaitTime").innerHTML = sessionStorage.getItem("laResWaitTime");
+            document.getElementById("bobsWaitTime").innerHTML = sessionStorage.getItem("bobsWaitTime");
+            document.getElementById("hesNotWaitTime").innerHTML = sessionStorage.getItem("hesNotWaitTime");
+            document.getElementById("mawWaitTime").innerHTML = sessionStorage.getItem("mawWaitTime");
+
+        } else if (sessionStorage.getItem("currentBar") === 'hesNot') {
+            document.getElementById("otherWait").innerHTML = 
+            `
+                <div class="expandedWait">
+                    <div class="rowExpanded">
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/LaRes.png" height="85px" width="85px">
+                            <strong><span id="laResWaitTime"></span></strong>
+                        </div>
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/GoodFellows.png" height="85px" width="85px">
+                            <br><strong><span id="goodfellowsWaitTime"></span></strong>
+                        </div>
+                    </div>
+                    <div class="rowExpanded">
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/PantanaBobs.png" height="85px" width="85px">
+                            <br><strong><span id="bobsWaitTime"></span></strong>
+                        </div>
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/MAW.png" height="85px" width="85px">
+                            <br><strong><span id="mawWaitTime"></span></strong>
+                        </div>
+                    </div>
+                </div>
+            
+            `;
+            // updates the other wait times to match what the current wait time is
+            document.getElementById("laResWaitTime").innerHTML = sessionStorage.getItem("laResWaitTime");
+            document.getElementById("goodfellowsWaitTime").innerHTML = sessionStorage.getItem("goodfellowsWaitTime");
+            document.getElementById("bobsWaitTime").innerHTML = sessionStorage.getItem("bobsWaitTime");
+            document.getElementById("mawWaitTime").innerHTML = sessionStorage.getItem("mawWaitTime");
+
+        } else if (sessionStorage.getItem("currentBar") === 'laRes') {
+            document.getElementById("otherWait").innerHTML = 
+            `
+                <div class="expandedWait">
+                    <div class="rowExpanded">
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/PantanaBobs.png" height="85px" width="85px">
+                            <strong><span id="bobsWaitTime"></span></strong>
+                        </div>
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/GoodFellows.png" height="85px" width="85px">
+                            <br><strong><span id="goodfellowsWaitTime"></span></strong>
+                        </div>
+                    </div>
+                    <div class="rowExpanded">
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/HesNot.png" height="85px" width="85px">
+                            <br><strong><span id="hesNotWaitTime"></span></strong>
+                        </div>
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/MAW.png" height="85px" width="85px">
+                            <br><strong><span id="mawWaitTime"></span></strong>
+                        </div>
+                    </div>
+                </div>
+            
+            `;
+            // updates the other wait times to match what the current wait time is
+            document.getElementById("bobsWaitTime").innerHTML = sessionStorage.getItem("bobsWaitTime");
+            document.getElementById("goodfellowsWaitTime").innerHTML = sessionStorage.getItem("goodfellowsWaitTime");
+            document.getElementById("hesNotWaitTime").innerHTML = sessionStorage.getItem("hesNotWaitTime");
+            document.getElementById("mawWaitTime").innerHTML = sessionStorage.getItem("mawWaitTime");
+
+        } else {
+            document.getElementById("otherWait").innerHTML = 
+            `
+                <div class="expandedWait">
+                    <div class="rowExpanded">
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/LaRes.png" height="85px" width="85px">
+                            <strong><span id="laResWaitTime"></span></strong>
+                        </div>
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/GoodFellows.png" height="85px" width="85px">
+                            <br><strong><span id="goodfellowsWaitTime"></span></strong>
+                        </div>
+                    </div>
+                    <div class="rowExpanded">
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/HesNot.png" height="85px" width="85px">
+                            <br><strong><span id="hesNotWaitTime"></span></strong>
+                        </div>
+                        <div class="columnExpand">
+                            <img onclick="returnHome()" src="./images/PantanaBobs.png" height="85px" width="85px">
+                            <br><strong><span id="bobsWaitTime"></span></strong>
+                        </div>
+                    </div>
+                </div>
+            
+            `;
+            // updates the other wait times to match what the current wait time is
+            document.getElementById("laResWaitTime").innerHTML = sessionStorage.getItem("laResWaitTime");
+            document.getElementById("goodfellowsWaitTime").innerHTML = sessionStorage.getItem("goodfellowsWaitTime");
+            document.getElementById("hesNotWaitTime").innerHTML = sessionStorage.getItem("hesNotWaitTime");
+            document.getElementById("bobsWaitTime").innerHTML = sessionStorage.getItem("bobsWaitTime");
+
+        }
+        
+    }
+
+    // This code is setting the current Bar Line and current Wait at the top of the screen
+    // It also displays the other wait times accordingly
+    if (sessionStorage.getItem('currentBar') === 'bobs') {
+        document.getElementById("currentlyInLine").innerHTML = "Pantana Bob's";
+        var currentWaitTime = sessionStorage.getItem('bobsWaitTime').substring(0, 2) + " minutes";
+        // Check to see if the current wait is a single digit number, if it is, readjust the string to fit
+        if (currentWaitTime[1] === 'm') {
+            currentWaitTime = sessionStorage.getItem('bobsWaitTime').substring(0, 1) + " minutes";
+        }
+        document.getElementById("currentWaitTime").innerHTML = currentWaitTime;
+
+        // this sets the other wait times
+        document.getElementById("otherWait").innerHTML = `
+            <div class="row">
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/LaRes.png" height="40px" width="40px">
+                    <strong><span id="laResWaitTime"></span></strong>
+                </div>
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/GoodFellows.png" height="40px" width="40px">
+                    <strong><span id="goodfellowsWaitTime"></span></strong>
+                </div>
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/HesNot.png" height="40px" width="40px">
+                    <strong><span id="hesNotWaitTime"></span></strong>
+                </div>
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/MAW.png" height="40px" width="40px">
+                    <strong><span id="mawWaitTime"></span></strong>
+                </div>
+            </div>
         `
-            <div class="expandedWait">
-                <div class="rowExpanded">
-                    <div class="columnExpand">
-                        <img onclick="returnHome()" src="./images/LaRes.png" height="85px" width="85px">
-                        <strong>30 min</strong>
-                    </div>
-                    <div class="columnExpand">
-                        <img onclick="returnHome()" src="./images/GoodFellows.png" height="85px" width="85px">
-                        <br><strong>25 min</strong>
-                    </div>
+        // updates the other wait times to match what the current wait time is
+        document.getElementById("laResWaitTime").innerHTML = sessionStorage.getItem("laResWaitTime");
+        document.getElementById("goodfellowsWaitTime").innerHTML = sessionStorage.getItem("goodfellowsWaitTime");
+        document.getElementById("hesNotWaitTime").innerHTML = sessionStorage.getItem("hesNotWaitTime");
+        document.getElementById("mawWaitTime").innerHTML = sessionStorage.getItem("mawWaitTime");
+
+
+    } else if (sessionStorage.getItem('currentBar') === 'goodfellows') {
+        document.getElementById("currentlyInLine").innerHTML = "Goodfellows";
+        var currentWaitTime = sessionStorage.getItem('goodfellowsWaitTime').substring(0, 2) + " minutes";
+        if (currentWaitTime[1] === 'm') {
+            currentWaitTime = sessionStorage.getItem('goodfellowsWaitTime').substring(0, 1) + " minutes";
+        }
+        document.getElementById("currentWaitTime").innerHTML = currentWaitTime;
+
+        document.getElementById("otherWait").innerHTML = `
+            <div class="row">
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/LaRes.png" height="40px" width="40px">
+                    <strong><span id="laResWaitTime"></span></strong>
                 </div>
-                <div class="rowExpanded">
-                    <div class="columnExpand">
-                        <img onclick="returnHome()" src="./images/HesNot.png" height="85px" width="85px">
-                        <br><strong>40 min</strong>
-                    </div>
-                    <div class="columnExpand">
-                        <img onclick="returnHome()" src="./images/MAW.png" height="85px" width="85px">
-                        <br><strong>10 min</strong>
-                    </div>
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/PantanaBobs.png" height="40px" width="40px">
+                    <strong><span id="bobsWaitTime"></span></strong>
                 </div>
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/HesNot.png" height="40px" width="40px">
+                    <strong><span id="hesNotWaitTime"></span></strong>
+                </div>
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/MAW.png" height="40px" width="40px">
+                    <strong><span id="mawWaitTime"></span></strong>
+                </div>
+            </div>
+        `
+        document.getElementById("laResWaitTime").innerHTML = sessionStorage.getItem("laResWaitTime");
+        document.getElementById("bobsWaitTime").innerHTML = sessionStorage.getItem("bobsWaitTime");
+        document.getElementById("hesNotWaitTime").innerHTML = sessionStorage.getItem("hesNotWaitTime");
+        document.getElementById("mawWaitTime").innerHTML = sessionStorage.getItem("mawWaitTime");
+
+
+    } else if (sessionStorage.getItem('currentBar') === 'hesNot') {
+        document.getElementById("currentlyInLine").innerHTML = "He's Not Here";
+        var currentWaitTime = sessionStorage.getItem('goodfellowsWaitTime').substring(0, 2) + " minutes";
+        if (currentWaitTime[1] === 'm') {
+            currentWaitTime = sessionStorage.getItem('hesNotWaitTime').substring(0, 1) + " minutes";
+        }
+        document.getElementById("currentWaitTime").innerHTML = currentWaitTime;
+
+        document.getElementById("otherWait").innerHTML = `
+            <div class="row">
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/LaRes.png" height="40px" width="40px">
+                    <strong><span id="laResWaitTime"></span></strong>
+                </div>
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/GoodFellows.png" height="40px" width="40px">
+                    <strong><span id="goodfellowsWaitTime"></span></strong>
+                </div>
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/PantanaBobs.png" height="40px" width="40px">
+                    <strong><span id="bobsWaitTime"></span></strong>
+                </div>
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/MAW.png" height="40px" width="40px">
+                    <strong><span id="mawWaitTime"></span></strong>
+                </div>
+            </div>
+        `
+        document.getElementById("laResWaitTime").innerHTML = sessionStorage.getItem("laResWaitTime");
+        document.getElementById("goodfellowsWaitTime").innerHTML = sessionStorage.getItem("goodfellowsWaitTime");
+        document.getElementById("bobsWaitTime").innerHTML = sessionStorage.getItem("bobsWaitTime");
+        document.getElementById("mawWaitTime").innerHTML = sessionStorage.getItem("mawWaitTime");
+
+
+    } else if (sessionStorage.getItem('currentBar') === 'laRes') {
+        document.getElementById("currentlyInLine").innerHTML = "La Residence";
+        var currentWaitTime = sessionStorage.getItem('laResWaitTime').substring(0, 2) + " minutes";
+        if (currentWaitTime[1] === 'm') {
+            currentWaitTime = sessionStorage.getItem('laResWaitTime').substring(0, 1) + " minutes";
+        }
+        document.getElementById("currentWaitTime").innerHTML = currentWaitTime;
+
+        document.getElementById("otherWait").innerHTML = `
+            <div class="row">
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/PantanaBobs.png" height="40px" width="40px">
+                    <strong><span id="bobsWaitTime"></span></strong>
+                </div>
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/GoodFellows.png" height="40px" width="40px">
+                    <strong><span id="goodfellowsWaitTime"></span></strong>
+                </div>
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/HesNot.png" height="40px" width="40px">
+                    <strong><span id="hesNotWaitTime"></span></strong>
+                </div>
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/MAW.png" height="40px" width="40px">
+                    <strong><span id="mawWaitTime"></span></strong>
+                </div>
+            </div>
+        `
+        document.getElementById("bobsWaitTime").innerHTML = sessionStorage.getItem("bobsWaitTime");
+        document.getElementById("goodfellowsWaitTime").innerHTML = sessionStorage.getItem("goodfellowsWaitTime");
+        document.getElementById("hesNotWaitTime").innerHTML = sessionStorage.getItem("hesNotWaitTime");
+        document.getElementById("mawWaitTime").innerHTML = sessionStorage.getItem("mawWaitTime");
+
+
+    } else {
+        document.getElementById("currentlyInLine").innerHTML = "Might As Well";
+        var currentWaitTime = sessionStorage.getItem('mawWaitTime').substring(0, 2) + " minutes";
+        if (currentWaitTime[1] === 'm') {
+            currentWaitTime = sessionStorage.getItem('mawWaitTime').substring(0, 1) + " minutes";
+        }
+        document.getElementById("currentWaitTime").innerHTML = currentWaitTime;
+
+        document.getElementById("otherWait").innerHTML = `
+            <div class="row">
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/LaRes.png" height="40px" width="40px">
+                    <strong><span id="laResWaitTime"></span></strong>
+                </div>
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/GoodFellows.png" height="40px" width="40px">
+                    <strong><span id="goodfellowsWaitTime"></span></strong>
+                </div>
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/HesNot.png" height="40px" width="40px">
+                    <strong><span id="hesNotWaitTime"></span></strong>
+                </div>
+                <div class="column">
+                    <img onclick="returnHome()" src="./images/PantanaBobs.png" height="40px" width="40px">
+                    <strong><span id="bobsWaitTime"></span></strong>
+                </div>
+            </div>
+        `
+        document.getElementById("laResWaitTime").innerHTML = sessionStorage.getItem("laResWaitTime");
+        document.getElementById("goodfellowsWaitTime").innerHTML = sessionStorage.getItem("goodfellowsWaitTime");
+        document.getElementById("hesNotWaitTime").innerHTML = sessionStorage.getItem("hesNotWaitTime");
+        document.getElementById("bobsWaitTime").innerHTML = sessionStorage.getItem("bobsWaitTime");
+    }
+    
+    
+    
+
+    // This checks to see if the survey has already been completed
+    if (sessionStorage.getItem("completedSurvey") === "true") {
+        document.getElementById("survey").innerHTML = renderCompletedSurveyPage();
+    } else {
+        document.getElementById("survey").innerHTML = 
+        `
+            
+            <div class="barform">
+                <p class="wait"><strong>While you wait:</strong></p>
+                <p class="formquestions">What is the cover fee?</p>
+                <input class="coverfee" type="number" id="money" placeholder="$0" required/>
+                <p class="formquestions">What type of music?</p>
+                <select class="musicType" id="music" required>
+                        <option value="select" >Select a Type</option>
+                        <option value="HousePlaylist">House Playlist</option>
+                        <option value="LiveBand">Live Band</option>
+                        <option value="DJ">DJ</option>
+                    </select>
+                <button class="w3-button button" id="submitbutton" onclick="submit()">Submit</button>
             </div>
         
         `
-       
     }
+    
+    // this determines if the navbar should take you to inLineWaitTime.html or just waitTime.html
+    if (sessionStorage.getItem('inLine') === "true") {
+        document.getElementById("navigation").innerHTML = `
+            <a href="homePage.html"><i class="fa-solid fa-home"></i></a>
+            <a href="inLineWaitTime.html"><i class="fa fa-hourglass"></i></a>
+            <a href="calendar.html"><i class="fa-solid fa-calendar-week"></i></a>
+            `;
+    } else {
+        document.getElementById("navigation").innerHTML = `
+        <a href="homePage.html"><i class="fa-solid fa-home"></i></a>
+        <a href="waitTime.html"><i class="fa fa-hourglass"></i></a>
+        <a href="calendar.html"><i class="fa-solid fa-calendar-week"></i></a>`;
+    }  
+    
+       
+    
 </script>
 
 </html>

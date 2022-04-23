@@ -64,9 +64,13 @@
         <img class="barImage" src="./images/PantanaBobs.png" height="80px" width="80px">
         <div  class="info">
           <p class="name">Pantana Bobs</p>
-          Wait time: <br> Cover Fee: $10.00 <br> Music: DJ
+          <span id="bobsWaitTime">Wait Time: 10min</span>
+          <br>
+          <span id="bobsCoverFee">Cover Fee: $10.00</span>
+          <br>
+          <span id="bobsMusic">Music: DJ</span>
           <div class="joinLineButton">
-            <a class="joinLineLink" id="line" onclick="joinLine()" href="inLineWaitTime.html">Join Line</a>
+            <a class="joinLineLink" id="line" onclick="joinLine('bobs')" href="inLineWaitTime.html">Join Line</a>
           </div>
         </div>
       </button>
@@ -83,9 +87,13 @@
         <img class="barImage" src="./images/GoodFellows.png" height="80px" width="80px">
         <div class="info">
           <p class="name">Goodfellows</p>
-          Wait time: <br> Cover Fee: None <br> Music: House Playlist
+          <span id="goodfellowsWaitTime">Wait Time: 20min</span>
+          <br>
+          <span id="goodfellowsCoverFee">Cover Fee: None</span>
+          <br>
+          <span id="goodfellowsMusic">Music: House Playlist</span>
           <div class="joinLineButton">
-            <a class="joinLineLink" id="line" onclick="joinLine()"  href="inLineWaitTime.html">Join Line</a>
+            <a class="joinLineLink" id="line" onclick="joinLine('goodfellows')"  href="inLineWaitTime.html">Join Line</a>
           </div>
         </div>
       </button>
@@ -102,9 +110,13 @@
       <img class="barImage" src="./images/HesNot.png" height="80px" width="80px">
         <div class="info">
           <p class="name">He's Not Here</p>
-          Wait time: <br> Cover Fee: $5.00 <br> Music: Live Band
+          <span id="hesNotWaitTime">Wait Time: 15min</span>
+          <br>
+          <span id="hesNotCoverFee">Cover Fee: $5.00</span>
+          <br>
+          <span id="hesNotMusic">Music: Live Band</span>
           <div class="joinLineButton">
-            <a class="joinLineLink" id="line" onclick="joinLine()"  href="inLineWaitTime.html">Join Line</a>
+            <a class="joinLineLink" id="line" onclick="joinLine('hesNot')"  href="inLineWaitTime.html">Join Line</a>
           </div>
         </div>
       </button>
@@ -118,9 +130,13 @@
         <img class="barImage" src="./images/LaRes.png" height="80px" width="80px">
         <div class="info">
           <p class="name">La Residence</p>
-          Wait time: <br> Cover Fee: None<br> Music: DJ
+          <span id="laResWaitTime">Wait Time: 10min</span>
+          <br>
+          <span id="laResCoverFee">Cover Fee: None</span>
+          <br>
+          <span id="laResMusic">Music: DJ</span>
           <div class="joinLineButton">
-            <a class="joinLineLink" id="line" onclick="joinLine()"href="inLineWaitTime.html">Join Line</a>
+            <a class="joinLineLink" id="line" onclick="joinLine('laRes')"href="inLineWaitTime.html">Join Line</a>
           </div>
         </div>
       </button>
@@ -135,9 +151,13 @@
         <img class="barImage" src="./images/MAW.png" height="80px" width="80px">
         <div class="info">
           <p class="name">Might As Well</p>
-          Wait time: <br> Cover Fee: None<br> Music: House Playlist
+          <span id="mawWaitTime">Wait Time: 5min</span>
+          <br>
+          <span id="mawCoverFee">Cover Fee: None</span>
+          <br>
+          <span id="mawMusic">Music: House Playlist</span>
           <div class="joinLineButton">
-            <a class="joinLineLink" id="line" onclick="joinLine()" href="inLineWaitTime.html">Join Line</a>
+            <a class="joinLineLink" id="line" onclick="joinLine('maw')" href="inLineWaitTime.html">Join Line</a>
           </div>
         </div>
       </button>
@@ -157,13 +177,51 @@
     <!-- Navbar -->
     <div class="navbar">
         <div class="bottomnav-centered">
-            <a href="homePage.html"><i class="fa-solid fa-home"></i></a>
-            <a href="waittime.html"><i class="fa fa-hourglass"></i></a>
-            <a href="calendar.html"><i class="fa-solid fa-calendar-week"></i></a>
+          <span id="navigation"></span>
         </div>
     </div> 
 
 
+    <script>
+      function joinLine(bar) {
+        sessionStorage.setItem('inLine', "true");
+        
+        // when someone leaves a line/enters a bar, completed survey should be set to false
+        // this is just for testing purposes
+        sessionStorage.setItem('completedSurvey', "false");
+
+
+        sessionStorage.setItem('currentBar', bar);
+        var bobsWaitTime = document.getElementById("bobsWaitTime").innerHTML.substring(11);
+        var goodfellowsWaitTime = document.getElementById("goodfellowsWaitTime").innerHTML.substring(11);
+        var hesNotWaitTime = document.getElementById("hesNotWaitTime").innerHTML.substring(11);
+        var laResWaitTime = document.getElementById("laResWaitTime").innerHTML.substring(11);
+        var mawWaitTime = document.getElementById("mawWaitTime").innerHTML.substring(11);
+
+        sessionStorage.setItem('bobsWaitTime', bobsWaitTime);
+        sessionStorage.setItem('goodfellowsWaitTime', goodfellowsWaitTime);
+        sessionStorage.setItem('hesNotWaitTime', hesNotWaitTime);
+        sessionStorage.setItem('laResWaitTime', laResWaitTime);
+        sessionStorage.setItem('mawWaitTime', mawWaitTime);
+
+        return true;
+      }
+
+      // this determines if the navbar should take you to inLineWaitTime.html or just waitTime.html
+      if (sessionStorage.getItem('inLine') === "true") {
+        document.getElementById("navigation").innerHTML = `
+            <a href="homePage.html"><i class="fa-solid fa-home"></i></a>
+            <a href="inLineWaitTime.html"><i class="fa fa-hourglass"></i></a>
+            <a href="calendar.html"><i class="fa-solid fa-calendar-week"></i></a>
+            `;
+      } else {
+          document.getElementById("navigation").innerHTML = `
+          <a href="homePage.html"><i class="fa-solid fa-home"></i></a>
+          <a href="waitTime.html"><i class="fa fa-hourglass"></i></a>
+          <a href="calendar.html"><i class="fa-solid fa-calendar-week"></i></a>`;
+      }  
+
+    </script>
 
 
 </body>
