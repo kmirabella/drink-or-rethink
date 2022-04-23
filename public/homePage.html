@@ -9,6 +9,7 @@
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="global.js" type="module"></script>
 <script src="homePage.js" type="module"></script>
+<script src="scripts/navBarCreation.js"></script>
 <script src="https://kit.fontawesome.com/29f2f280f3.js" crossorigin="anonymous"></script>
 
 <style>
@@ -178,6 +179,7 @@
     <div class="navbar">
         <div class="bottomnav-centered">
           <span id="navigation"></span>
+          <!-- nav bar will be added from the linked script (navBarCreation.js) -->
         </div>
     </div> 
 
@@ -208,18 +210,11 @@
       }
 
       // this determines if the navbar should take you to inLineWaitTime.html or just waitTime.html
-      if (sessionStorage.getItem('inLine') === "true") {
-        document.getElementById("navigation").innerHTML = `
-            <a href="homePage.html"><i class="fa-solid fa-home"></i></a>
-            <a href="inLineWaitTime.html"><i class="fa fa-hourglass"></i></a>
-            <a href="calendar.html"><i class="fa-solid fa-calendar-week"></i></a>
-            `;
-      } else {
-          document.getElementById("navigation").innerHTML = `
-          <a href="homePage.html"><i class="fa-solid fa-home"></i></a>
-          <a href="waitTime.html"><i class="fa fa-hourglass"></i></a>
-          <a href="calendar.html"><i class="fa-solid fa-calendar-week"></i></a>`;
-      }  
+      createNavBar(); 
+
+
+      // this determines how the page should render (looks at if the user is in line or not)
+
 
     </script>
 
