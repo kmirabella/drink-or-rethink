@@ -4,11 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="enteredBar.css">
+<link rel="stylesheet" href="waittime.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script src="calendar.js" type="module"></script>
 <script src="global.js" type="module"></script>
+<script src="scripts/renderCompletedSurveyPage.js"></script>
+<script src="scripts/renderBeforeSurvey.js"></script>
 <script src="scripts/navBarCreation.js"></script>
-<script src="node_modules/jquery/dist/jquery.js"></script>
+<link rel="stylesheet" href="stylesheets/inLineWaitTime.css">
 <script src="https://kit.fontawesome.com/29f2f280f3.js" crossorigin="anonymous"></script>
 
 
@@ -18,13 +21,50 @@
             <img class="logo" src="images/logo.png"></img>
          </a>        
         <div>
-            <h1 class="congrats">Congratulations, you're in!</h1>
-            <button type="button" class="back-home" onclick="homeClick()">Back to Home</button>
-            <script>
-                function homeClick() {
-                    window.location.href = "./homePage.html";
-                }
-            </script>
+                <img src="images/fireworks.png" width= 300px; height = 200px;  >
+                <h1 class="congrats">You made it!</h1>
+                <div class="w3-container whileYouWait" id="barForm"style= "margin-top:60%">
+                    <!-- The survey and completed message will be added in here via scripts -->
+                </div>
+                    <script>
+                                console.log(sessionStorage.getItem('completedSurvey'));
+                                if (sessionStorage.getItem('completedSurvey') === "true") {
+                                    document.getElementById("barForm").innerHTML = 
+                                    `<button class="w3-button button" id="submitbutton" onclick="backHome()">Home</button>`;
+                                    document.getElementById("barForm").style.backgroundColor = "#424b64"; 
+
+
+                                } else {
+                                    document.getElementById("barForm").innerHTML = 
+                                        `<div class="barform">
+                                            <p class="wait"><strong>Before you go:</strong></p>
+                                            <p class="formquestions">What is the cover fee?</p>
+                                            <input class="coverfee" type="number" id="money" placeholder="$0" required/>
+                                            <p class="formquestions">What type of music?</p>
+                                            <select class="musicType" id="music" required>
+                                                    <option value="select" >Select a Type</option>
+                                                    <option value="HousePlaylist">House Playlist</option>
+                                                    <option value="LiveBand">Live Band</option>
+                                                    <option value="DJ">DJ</option>
+                                                </select>
+                                            <button class="w3-button button" id="submitbutton" onclick="submit()">Submit</button>
+                                        </div>`;
+                            
+                            
+                                }               
+                                function submit() {
+                                    document.getElementById("barForm").innerHTML = `<p> Thank you for your feedback!</p>
+                                    <button class="w3-button button" id="submitbutton" onclick="backHome()">Home</button>`;
+                                    document.getElementById("barForm").style.color = "#00484c";
+                                }       
+                                function backHome(){
+                                    window.location.href = './homepage.html';
+                                }                       
+                                sessionStorage.setItem('completedSurvey', 'false');
+   
+                            </script>
+                        </div>
+                    </div>
         </div>
     </div>
 

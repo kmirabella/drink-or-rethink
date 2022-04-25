@@ -1,5 +1,6 @@
 function renderCompletedSurveyPage() {
-    document.getElementById("barForm").innerHTML = "Thank You For Your Feedback";
+    document.getElementById("barForm").innerHTML = "Thank You For Your Feedback!";
+    document.getElementById("barForm").style.color = "#00484c";
 
     //expands the other wait times after the survey has been completed
     if (sessionStorage.getItem("currentBar") === 'bobs') {
