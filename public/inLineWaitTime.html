@@ -13,15 +13,17 @@
 <script src="https://kit.fontawesome.com/29f2f280f3.js" crossorigin="anonymous"></script>
 
 <body>
-
     <div class="title-container">
-        <a href= "homePage.html">
+        <a href="homePage.html">
             <img class="logo" src="images/logo.png"></img>
-         </a>    </div>
+        </a>
+    </div>
     <div class="w3-container inline-container">
         <div class="w3-container bar-line-info">
             <p>You're currently in line at <br><strong><span id="currentlyInLine"></span></strong></p>
-            <p>The wait time is<br> <strong><span id="currentWaitTime"></span></strong></p>
+            <p>The wait time is
+                <p2><br><strong><span id="currentWaitTime"></span></strong></p>
+            </p2>
         </div>
 
         <button class="leaveLine w3-button button" onclick="leaveLine()">Leave Line</button>
@@ -59,7 +61,7 @@
     <div class="navbar">
         <div class="bottomnav-centered">
             <span id="navigation"></span>
-                <!-- nav bar will be added from the linked script (navBarCreation.js) -->
+            <!-- nav bar will be added from the linked script (navBarCreation.js) -->
         </div>
     </div>
 
@@ -77,13 +79,13 @@
         sessionStorage.setItem('completedSurvey', "true");
 
         renderCompletedSurveyPage();
-    }    
+    }
 
     // This checks to see if the survey has already been completed, if not, render survey form
     if (sessionStorage.getItem('completedSurvey') === "true") {
         renderCompletedSurveyPage();
     } else {
-        document.getElementById("barForm").innerHTML = 
+        document.getElementById("barForm").innerHTML =
             `<div class="barform">
                 <p class="wait"><strong>While you wait:</strong></p>
                 <p class="formquestions">What is the cover fee?</p>
@@ -103,12 +105,9 @@
         renderBeforeSurvey();
 
     }
-    
+
     // this determines if the navbar should take you to inLineWaitTime.html or just waitTime.html
     createNavBar();
-    
-       
-    
 </script>
 
 </html>
