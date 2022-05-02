@@ -20,19 +20,19 @@ function renderBeforeSurvey() {
             <div class="row">
                 <div class="column">
                     <img onclick="returnHome()" src="./images/LaRes.png" height="40px" width="40px">
-                    <strong><span id="laResWaitTime"></span></strong>
+                    <strong><span id="laResWaitTime">mins</span></strong>
                 </div>
                 <div class="column">
                     <img onclick="returnHome()" src="./images/GoodFellows.png" height="40px" width="40px">
-                    <strong><span id="goodfellowsWaitTime"></span></strong>
+                    <strong><span id="goodfellowsWaitTime">mins</span></strong>
                 </div>
                 <div class="column">
                     <img onclick="returnHome()" src="./images/HesNot.png" height="40px" width="40px">
-                    <strong><span id="hesNotWaitTime"></span></strong>
+                    <strong><span id="hesNotWaitTime">mins</span></strong>
                 </div>
                 <div class="column">
                     <img onclick="returnHome()" src="./images/MAW.png" height="40px" width="40px">
-                    <strong><span id="mawWaitTime"></span></strong>
+                    <strong><span id="mawWaitTime">mins</span></strong>
                 </div>
             </div>
         `
@@ -55,15 +55,15 @@ function renderBeforeSurvey() {
             <div class="row">
                 <div class="column">
                     <img onclick="returnHome()" src="./images/LaRes.png" height="40px" width="40px">
-                    <strong><span id="laResWaitTime"></span></strong>
+                    <strong><span id="laResWaitTime">mins</span></strong>
                 </div>
                 <div class="column">
                     <img onclick="returnHome()" src="./images/PantanaBobs.png" height="40px" width="40px">
-                    <strong><span id="bobsWaitTime"></span></strong>
+                    <strong><span id="bobsWaitTime">mins</span></strong>
                 </div>
                 <div class="column">
                     <img onclick="returnHome()" src="./images/HesNot.png" height="40px" width="40px">
-                    <strong><span id="hesNotWaitTime"></span></strong>
+                    <strong><span id="hesNotWaitTime">mins</span></strong>
                 </div>
                 <div class="column">
                     <img onclick="returnHome()" src="./images/MAW.png" height="40px" width="40px">

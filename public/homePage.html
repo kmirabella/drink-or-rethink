@@ -3,46 +3,16 @@
 <title>Home</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="homePage.css">
+<link rel="stylesheet" href="stylesheets/homePage.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
 <script src="node_modules/jquery/dist/jquery.js"></script>
-<script src="global.js" type="module"></script>
 <script src="homePage.js" type="module"></script>
 <script src="scripts/navBarCreation.js"></script>
 <script src="scripts/renderInLineHomepage.js"></script>
 <script src="https://kit.fontawesome.com/29f2f280f3.js" crossorigin="anonymous"></script>
 
-<style>
-    .icon-bar {
-        width: 100%;
-        background-color: #555;
-        overflow: auto;
-        
-    }
-    
-    .icon-bar a {
-        float: left;
-        width: 20%;
-        text-align: center;
-        padding: 12px 0;
-        transition: all 0.3s ease;
-        color: white;
-        font-size: 36px;
-       
-    }
-    
-    .icon-bar a:hover {
-        background-color: #000;
-    }
-    
-</style>
-
 
 <body>
-  <script>
-
-  </script>
   <div class="home-container">
     <div class="bar-buttons">
       <a href= "homePage.html">
@@ -203,20 +173,31 @@
 
   function changeWait(refreshTime) {
       document.getElementById("bobsWaitTime").innerHTML = 
-      `<span class = "fade-in-text" id="bobsWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
+      `<span class="fade-in-text" id="bobsWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
     
       document.getElementById("goodfellowsWaitTime").innerHTML = 
-      `<span class = "fade-in-text" id="goodfellowsWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
+      `<span class="fade-in-text" id="goodfellowsWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
     
       document.getElementById("hesNotWaitTime").innerHTML = 
-      `<span class = "fade-in-text" id="hesNotWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
+      `<span class="fade-in-text" id="hesNotWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
     
       document.getElementById("laResWaitTime").innerHTML = 
-      `<span class = "fade-in-text" id="laResWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
+      `<span class="fade-in-text" id="laResWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
       
       document.getElementById("mawWaitTime").innerHTML = 
-      `<span class = "fade-in-text" id="mawWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
+      `<span class="fade-in-text" id="mawWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
     
+        var bobsWaitTime = document.getElementById("bobsWaitTime").innerHTML.slice(-12, -7);
+        var goodfellowsWaitTime = document.getElementById("goodfellowsWaitTime").innerHTML.slice(-12, -7);
+        var hesNotWaitTime = document.getElementById("hesNotWaitTime").innerHTML.slice(-12, -7);
+        var laResWaitTime = document.getElementById("laResWaitTime").innerHTML.slice(-12, -7);
+        var mawWaitTime = document.getElementById("mawWaitTime").innerHTML.slice(-12, -7);
+
+        sessionStorage.setItem('bobsWaitTime', bobsWaitTime);
+        sessionStorage.setItem('goodfellowsWaitTime', goodfellowsWaitTime);
+        sessionStorage.setItem('hesNotWaitTime', hesNotWaitTime);
+        sessionStorage.setItem('laResWaitTime', laResWaitTime);
+        sessionStorage.setItem('mawWaitTime', mawWaitTime);
     }
     setInterval(changeWait,10000);
         var bobsWaitTime = document.getElementById("bobsWaitTime").innerHTML.substring(11);
