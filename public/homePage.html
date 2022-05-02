@@ -41,24 +41,7 @@
 
 <body>
   <script>
-    function changeWait(refreshTime) {
-      document.getElementById("bobsWaitTime").innerHTML = 
-      `<span id="bobsWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
-    
-      document.getElementById("goodfellowsWaitTime").innerHTML = 
-      `<span id="goodfellowsWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
-    
-      document.getElementById("hesNotWaitTime").innerHTML = 
-      `<span id="hesNotWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
-    
-      document.getElementById("laResWaitTime").innerHTML = 
-      `<span id="laResWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
-      
-      document.getElementById("mawWaitTime").innerHTML = 
-      `<span id="mawWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
-    
-    }
-    setInterval(changeWait,5000);
+
   </script>
   <div class="home-container">
     <div class="bar-buttons">
@@ -217,15 +200,25 @@
 
 
     <script>
-      function joinLine(bar) {
-        sessionStorage.setItem('inLine', "true");
-        
-        // when someone leaves a line/enters a bar, completed survey should be set to false
-        // this is just for testing purposes
-        sessionStorage.setItem('completedSurvey', "false");
 
-
-        sessionStorage.setItem('currentBar', bar);
+  function changeWait(refreshTime) {
+      document.getElementById("bobsWaitTime").innerHTML = 
+      `<span class = "fade-in-text" id="bobsWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
+    
+      document.getElementById("goodfellowsWaitTime").innerHTML = 
+      `<span class = "fade-in-text" id="goodfellowsWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
+    
+      document.getElementById("hesNotWaitTime").innerHTML = 
+      `<span class = "fade-in-text" id="hesNotWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
+    
+      document.getElementById("laResWaitTime").innerHTML = 
+      `<span class = "fade-in-text" id="laResWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
+      
+      document.getElementById("mawWaitTime").innerHTML = 
+      `<span class = "fade-in-text" id="mawWaitTime">Wait Time: ${Math.round(10*Math.random())/10 *50}min</span>`;
+    
+    }
+    setInterval(changeWait,10000);
         var bobsWaitTime = document.getElementById("bobsWaitTime").innerHTML.substring(11);
         var goodfellowsWaitTime = document.getElementById("goodfellowsWaitTime").innerHTML.substring(11);
         var hesNotWaitTime = document.getElementById("hesNotWaitTime").innerHTML.substring(11);
@@ -237,6 +230,19 @@
         sessionStorage.setItem('hesNotWaitTime', hesNotWaitTime);
         sessionStorage.setItem('laResWaitTime', laResWaitTime);
         sessionStorage.setItem('mawWaitTime', mawWaitTime);
+
+
+      function joinLine(bar) {
+        sessionStorage.setItem('inLine', "true");
+        
+        // when someone leaves a line/enters a bar, completed survey should be set to false
+        // this is just for testing purposes
+        sessionStorage.setItem('completedSurvey', "false");
+
+
+        sessionStorage.setItem('currentBar', bar);
+  
+
 
         return true;
       }

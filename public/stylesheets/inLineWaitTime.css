@@ -148,21 +148,39 @@ p {
     margin-top: 5px;
 }
 
-p2 strong {
-    animation: color-change 8s infinite;
-}
 
-@keyframes color-change {
-    0% {
-        color: #cf574e;
-    }
-    50% {
-        color: #04AA6D;
-    }
-    100% {
-        color: #7bafd4;
-    }
-}
+.fade-in-text {
+    animation: fadeIn linear 1.2s;
+    -webkit-animation: fadeIn linear 1.2s;
+    -moz-animation: fadeIn linear 1.2s;
+    -o-animation: fadeIn linear 1.2s;
+    -ms-animation: fadeIn linear 1.2s;
+  }
+  
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
 
 
 /*w3 school styling end*/
